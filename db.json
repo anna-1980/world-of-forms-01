@@ -1,0 +1,148 @@
+
+{
+ 
+  "users": [
+    {
+      "id": 101,
+      "name": "User 1",
+      "email": "user1@test.com",
+      "phone": "123-456-1101",
+      "department": "IT",
+      "role": "Frontend Developer"
+    },
+    {
+      "id": 102,
+      "name": "User 2",
+      "email": "user2@test.com",
+      "phone": "123-456-1102",
+      "department": "HR",
+      "role": "Recruiter"
+    },
+    {
+      "id": 103,
+      "name": "User 3",
+      "email": "user3@test.com",
+      "phone": "123-456-1103",
+      "department": "IT",
+      "role": "Backend Developer"
+    },
+    {
+      "id": 104,
+      "name": "User 4",
+      "email": "user4@test.com",
+      "phone": "123-456-1104",
+      "department": "IT",
+      "role": "Tester"
+    },
+    {
+      "id": 105,
+      "name": "User 5",
+      "email": "user5@test.com",
+      "phone": "123-456-1105",
+      "department": "IT",
+      "role": "Frontend Developer"
+    },
+    {
+      "id": 106,
+      "name": "User 6",
+      "email": "user6@test.com",
+      "phone": "123-456-1106",
+      "department": "Finance",
+      "role": "Manager"
+    },
+    {
+      "id": 107,
+      "name": "User 7",
+      "email": "user7@test.com",
+      "phone": "123-456-1107",
+      "department": "IT",
+      "role": "Manager"
+    },
+    {
+      "id": 108,
+      "name": "User 8",
+      "email": "user8@test.com",
+      "phone": "123-456-1108",
+      "department": "HR",
+      "role": "Assistant"
+    },
+    {
+      "id": 109,
+      "name": "User 9",
+      "email": "user9@test.com",
+      "phone": "123-456-1109",
+      "department": "IT",
+      "role": "Frontend Developer"
+    },
+    {
+      "id": 110,
+      "name": "User 10",
+      "email": "user10@test.com",
+      "phone": "123-456-1110",
+      "department": "IT",
+      "role": "Project Manager"
+    }
+  ],
+
+  "departments": [
+      {
+          "id": 200,
+          "name": "IT",
+          "location": "Heidelberg"
+      },
+      {
+          "id": 201,
+          "name": "HR",
+          "location": "Walldorf"
+      },
+      {
+          "id": 202,
+          "name": "Finance",
+          "location": "Walldorf"
+      }
+  ], 
+  
+    "meetings": [
+      {
+        "id": 301,
+        "time-stamp": "2022-03-01T10:00:00Z",
+        "signments": [
+          {
+            "data-stamp": "2022-03-01T11:00:00Z",
+            "signing-person": {"id": 101, "name": "User 1"},
+            "form-data": "Initial project scope defined."
+          }
+        ],
+        "title": "Project Kickoff",
+        "description": "Initial meeting to discuss project scope and deliverables.",
+        "date": "2022-03-01",
+        "attendees": [
+          {"id": 101, "name": "User 1"},
+          {"id": 102, "name": "User 2"},
+          {"id": 103, "name": "User 3"}
+        ],
+        "location": "Heidelberg"
+      },
+      {
+        "id": 302,
+        "time-stamp": "2022-03-02T14:00:00Z",
+        "signments": [
+          {
+            "data-stamp": "2022-03-02T15:00:00Z",
+            "signing-person": {"id": 104, "name": "User 4"},
+            "form-data": "Sprint tasks defined."
+          }
+        ],
+        "title": "Sprint Planning",
+        "description": "Meeting to plan the tasks for the next sprint.",
+        "date": "2022-03-02",
+        "attendees": [
+          {"id": 104, "name": "User 4"},
+          {"id": 105, "name": "User 5"},
+          {"id": 106, "name": "User 6"}
+        ],
+        "location": "Walldorf"
+      }
+    ]
+ 
+}
