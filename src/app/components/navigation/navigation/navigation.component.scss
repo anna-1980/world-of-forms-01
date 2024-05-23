@@ -1,0 +1,37 @@
+@import '../../../../styles.scss'; 
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: map-get(map-get($colors, orange), light);
+  .navigation {
+    width: 100%;
+    max-width: toRem(600);
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+
+  
+    &-link {
+      text-decoration: none;
+    }
+  
+    &-btn {
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 5px;
+        background-color: map-get(map-get($colors, green), light);
+        color: map-get(map-get($colors, grey), dark);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: map-get(map-get($colors, green), dark);
+          color: map-get(map-get($colors, grey), light);
+        }
+      }
+     
+  }
+  
+}

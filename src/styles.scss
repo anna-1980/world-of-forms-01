@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+$colors: (
+  green: (
+    light: #64b664,
+    default: #008000,
+    dark: #006400
+  ),
+  grey: (
+    light: #ffffff,
+    default: #808080,
+    dark: #2b2929
+  ),
+  red: (
+    light: #FF6347,
+    default: #FF0000,
+    dark: #8B0000
+  ),
+  yellow: (
+    light: #FFFF00,
+    default: #FFD700,
+    dark: #B8860B
+  ),
+  orange: (
+    light: #f8d39c,
+    default: #eba40b,
+    dark: #a35d07
+  ),
+
+);
+
+
+@function toRem($size) {
+  @return $size / 16 * 1rem;
+}
