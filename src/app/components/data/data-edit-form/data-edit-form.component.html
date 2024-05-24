@@ -1,0 +1,41 @@
+<form [formGroup]="signmentForm"  >
+  <label>
+    Result:
+    <input type="text" formControlName="result">
+  </label>
+  <label>
+    Key Strengths:
+    <input type="text" formControlName="keyStrengths">
+  </label>
+  <label>
+    Key Weaknesses:
+    <input type="text" formControlName="keyWeaknesses">
+  </label>
+ <br>
+ <div class="radio-btn-error">
+    <div class="row">
+      <div class="row__label"  >
+        <span Evaluation is required></span>
+      </div>
+      <div class="row__header" *ngFor="let item of level | keyvalue">
+       <label>{{item.value }}</label>
+      </div>
+    </div>
+    <div class="row" *ngFor="let item of levelArray().controls">
+      <label for="item"> {{item.get('criteriumType')?.value}}</label>
+      
+        <div class="radio-group" [formControl]="toControl(item.get('level')!)">
+          <input type="radio" name="level" [value]="0" formControlName="level" > 
+          <input type="radio" name="level" [value]="1" formControlName="level" >
+          <input type="radio" name="level" [value]="2" formControlName="level" >
+          <input type="radio" name="level" [value]="3" formControlName="level" >
+          <input type="radio" name="level" [value]="4" formControlName="level" >
+          <input type="radio" name="level" [value]="5"  >
+        </div>
+
+    
+
+    </div>
+ </div>
+  <button (click)="onSubmit()">Submit</button>
+</form>
