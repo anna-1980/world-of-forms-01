@@ -1,0 +1,2127 @@
+{
+  "id": 117,
+  "external_id": "2024-04-19-5",
+  "acronym": "007- Anna - Testing",
+  "title": "Anna - April Testing (ENG)",
+  "documentation_status": "TSB Prioritization",
+  "timestamp": "2024-05-06T10:21:36.866Z",
+  "histories": [
+      {
+          "id": 871,
+          "study_id": 117,
+          "status": "TSB Prioritization",
+          "start_time": "2024-05-06T10:21:36.860Z",
+          "user_login_id": "anna101",
+          "start_data": {
+              "id": 117,
+              "external_id": "2024-04-19-5",
+              "title": "Anna - April Testing (ENG)",
+              "summary": {
+                  "type": "doc",
+                  "content": [
+                      {
+                          "type": "paragraph",
+                          "attrs": {
+                              "align": null
+                          },
+                          "content": [
+                              {
+                                  "type": "text",
+                                  "marks": [
+                                      {
+                                          "type": "text_color",
+                                          "attrs": {
+                                              "color": "rgb(97, 79, 65)"
+                                          }
+                                      },
+                                      {
+                                          "type": "text_background_color",
+                                          "attrs": {
+                                              "backgroundColor": "rgb(255, 255, 255)"
+                                          }
+                                      }
+                                  ],
+                                  "text": "Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese."
+                              }
+                          ]
+                      }
+                  ]
+              },
+              "de_title": "Anna - April Testing (DE)",
+              "de_summary": {
+                 "type": "doc",
+                  "content": [
+                      {
+                          "type": "paragraph",
+                          "attrs": {
+                              "align": null
+                          },
+                          "content": [
+                              {
+                                  "type": "text",
+                                  "marks": [
+                                      {
+                                          "type": "text_color",
+                                          "attrs": {
+                                              "color": "rgb(97, 79, 65)"
+                                          }
+                                      },
+                                      {
+                                          "type": "text_background_color",
+                                          "attrs": {
+                                              "backgroundColor": "rgb(255, 255, 255)"
+                                          }
+                                      }
+                                  ],
+                                  "text": "Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese."
+                              }
+                          ]
+                      }
+                  ]
+              },
+              "sponsored_portfolio": "infrastructure",
+              "keywords": [
+                  "super",
+                  "nice",
+                  "trial",
+                  "synopsis",
+                  "testing"
+              ],
+              "other_lega_sponsor": null,
+              "pei_involved": false,
+              "bfarm_involved": false,
+              "bfsinvolved": false,
+              "mdr_class": null,
+              "ivdr_class": null,
+              "authority_submission": [
+                  "DMIDS (Deutsches Medizinprodukte-Informations- und Datenbanksystem)"
+              ],
+              "ethics_committee_involved": true,
+              "hypotheses": {
+                  "type": "doc",
+                  "content":  "why is the filed fot hypotesis repeted later in the object?"
+              },
+   
+              "other_intervention_type": null,
+              "other_primary_purpose": null,
+              "interventional_study_model": "single arm",
+              "observational_study_model": null,
+        
+              "other_name": null,
+ 
+              "test_accuracy": null,
+              "accuracy_description": null,
+              "safety": null,
+              "secondary_endpoint": null,
+              "patient_eligibility": "555",
+              "patient_eligibilitytype": null,
+              "patient_allocated": "444",
+              "patient_allocatedtype": null,
+ 
+              "patient_analyzed": "222",
+      
+              "follow_up": null,
+              "trial_outline": {
+                  "type": "doc",
+                  "content": [
+                      {
+                          "type": "paragraph",
+                          "attrs": {
+                              "align": null
+                         },
+                          "content": [
+                              {
+                                  "type": "text",
+                                  "marks": [
+                                      {
+                                          "type": "text_color",
+                                          "attrs": {
+                                              "color": "rgb(97, 79, 65)"
+                                          }
+                                      },
+                                      {
+                                          "type": "text_background_color",
+                                          "attrs": {
+                                              "backgroundColor": "rgb(255, 255, 255)"
+                                          }
+                                      }
+                                  ],
+                                  "text": "Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese."
+                              }
+                          ]
+                      }
+                  ]
+              },
+ 
+ 
+              "acronym": "007- Anna - Testing",
+              "Involved": null,
+
+              "enrollment": null,
+              "international": null,
+              "startDate": null,
+              "completionDate": null,
+              "peiApprovalDate": null,
+              "peiNumber": null,
+              "fundingAmmount": null,
+              "status": null,
+              "completionDateType": null,
+              "startDateType": null,
+              "enrollmentType": null,
+              "type": "Interventional",
+              "interventionType": [
+                  "Device"
+              ],
+              "dealingWith": null,
+              "timePerspective": null,
+              "masking": null,
+              "randomized": null,
+              "interventionModel": null,
+              "controlGroup": null,
+              "treatmentForm": "Prevention",
+              "therapyLine": null,
+   
+   
+
+              "fundingCurrency": "Euro",
+              "timestamp": "2024-05-06T10:21:08.335Z",
+              "researchTopic": null,
+              "documentation_status": "TSB Prioritization Ready",
+              "molecular_markers": null,
+              "indications": [
+                  "Breast Cancer"
+              ],
+              "funding_type": null,
+              "total_cost": null,
+              "has_external_partner": false,
+              "is_other": false,
+              "other_control_group": null,
+              "min_age": -1,
+              "max_age": -1,
+              "min_age_unit": null,
+              "max_age_unit": null,
+              "gender": [
+                  "female"
+              ],
+  
+              "funding_start_date": null,
+              "funding_completion_date": null,
+              "funding_start_date_type": null,
+              "funding_completion_date_type": null,
+              "other": null,
+              "prt": [
+                  "Precision Local Therapy"
+              ],
+              "pda": [
+                  "Brain"
+              ],
+              "other_prt": null,
+              "other_pda": null,
+              "planned_patent": "n.a.",
+              "study_idea": "Parental institution",
+              "planned_patent_freetext": null,
+       
+              "authority_submission_text": null,
+              "ethics_commitee_text": null,
+              "pei_text": null,
+              "bfarm_text": null,
+              "bfs_text": null,
+              "other_text": null,
+ 
+              "study_users": [
+                  {
+                      "id": 8282,
+                      "study_id": 117,
+                      "user_id": 212121,
+                      "role_id": "documentalist",
+                      "function": null,
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": null,
+                      "title": null,
+                      "main": null,
+                     "user": {
+                          "id": 212121,
+                          "login_id": "anna101",
+                          "email": "anna101@test.com",
+                          "first_name": "Anna",
+                          "last_name": "101"
+                      }
+                  },
+                  {
+                      "id": 8284,
+                      "study_id": 117,
+                      "user_id": 5555,
+                      "role_id": "applicant",
+                      "function": "Tester",
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": "456456",
+                      "title": null,
+                      "main": null,
+                      "user": {
+                          "id": 5555,
+                          "login_id": "tina",
+                          "email": "tina.bena@test.com",
+                          "first_name": "Tina",
+                          "last_name": "Bena"
+                      }
+                  },
+                  {
+                      "id": 8286,
+                      "study_id": 117,
+                      "user_id": 1515,
+                      "role_id": "patientInvolvement",
+                      "function": null,
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": null,
+                      "title": "Prof.",
+                      "main": null,
+                      "user": {
+                          "id": 1515,
+                          "login_id": null,
+                          "email": "dell.awesome@test.de",
+                          "first_name": "Dell",
+                          "last_name": "Awesome"
+                      }
+                  },
+                  {
+                      "id": 8281,
+                      "study_id": 117,
+                      "user_id": 212121,
+                      "role_id": "documentalist",
+                      "function": null,
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": null,
+                      "title": null,
+                      "main": null,
+                      "user": {
+                          "id": 212121,
+                          "login_id": "anna101",
+                          "email": "anna101@test.com",
+                          "first_name": "Anna",
+                          "last_name": "101"
+                      }
+                  },
+                  {
+                      "id": 8283,
+                      "study_id": 117,
+                      "user_id": 212121,
+                      "role_id": "applicant",
+                      "function": "Writer",
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": "789789",
+                      "title": "Dr.",
+                      "main": true,
+                      "user": {
+                          "id": 212121,
+                          "login_id": "anna101",
+                          "email": "anna101@test.com",
+                          "first_name": "Anna",
+                          "last_name": "101"
+                      }
+                  },
+                  {
+                      "id": 8285,
+                      "study_id": 117,
+                      "user_id": 1010,
+                      "role_id": "applicant",
+                      "function": "Architect",
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": "123123",
+                      "title": null,
+                      "main": null,
+                      "user": {
+                          "id": 1010,
+                          "login_id": "chris202",
+                          "email": "chris.prat@test.com",
+                          "first_name": "Chris",
+                          "last_name": "Prat"
+                      }
+                  }
+              ],
+              "files": []
+          },
+          "chat_id": null,
+          "signments": [
+              {
+                  "id": "0b187922-58f0-4b00-8aec-c33be76a2b09",
+                  "timestamp_answer": null,
+                  "timestamp_request": "2024-05-07T11:53:13.956Z",
+                  "comment": null,
+                  "data": {
+                      "main_applicants": [
+                          {
+                              "id": 8283,
+                              "study_id": 117,
+                              "user_id": 212121,
+                              "role_id": "applicant",
+                              "function": "Writer",
+                              "freetext": null,
+                              "association": null,
+                              "self_support_group": null,
+                              "affiliation": null,
+                              "other_affiliation": null,
+                              "telephone": "789789",
+                              "title": "Dr.",
+                              "main": true,
+                              "study_user_instituts": [
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 2,
+                                      "role_id": "studySite",
+                                      "institute": {
+                                          "id": 2,
+                                          "name": "Site Heidelberg",
+                                          "inactive": false,
+                                          "mail": [
+                                              "karolina@test.de",
+                                              "peter@test.de",
+                                              "coordination@test.de"
+                                          ],
+                                          "type": null
+                                      }
+                                  },
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 8,
+                                      "role_id": "userInstitut",
+                                      "institute": {
+                                          "id": 8,
+                                          "name": "US-NOW",
+                                          "inactive": false,
+                                          "mail": null,
+                                          "type": null
+                                      }
+                                  }
+                              ],
+                              "user": {
+                                  "id": 212121,
+                                  "login_id": "anna101",
+                                  "email": "anna101@test.com",
+                                  "first_name": "Anna",
+                                  "last_name": "101"
+                              }
+                          }
+                      ],
+                      "study": [
+                          {
+                              "id": 10092,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 19,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 19,
+                                  "name": "Site Berlin",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "piwonia@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10093,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 2,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 2,
+                                  "name": "Site Heidelberg",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "peter@test.de",
+                                      "coordination@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10094,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 16,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 16,
+                                  "name": "Site Dresden",
+                                  "inactive": false,
+                                  "mail": [
+                                      "hs@test.de",
+                                      "ks@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          }
+                      ],
+                      "evaluationCriteriaRating": [
+                          {
+                              "criterium": "Medical need",
+                              "level": 3.33
+                          },
+                          {
+                              "criterium": "scientific competitiveness",
+                              "level": 3.33
+                          },
+                          {
+                              "criterium": "Existance of preparatory work",
+                              "level": 2.33
+                          },
+                          {
+                              "criterium": "Innovation",
+                              "level": 2.67
+                          },
+                          {
+                              "criterium": "Contribution to Science",
+                              "level": 2.33
+                          },
+                          {
+                              "criterium": "Overall judgement",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Average of All Criteria",
+                              "level": 2.83
+                          }
+                      ],
+                      "acronym": "007- Anna - Testing",
+                      "title": "Anna - April Testing (ENG)",
+                      "date_submission": "2024-04-26T08:49:37.597Z",
+                      "keyStrengths": null,
+                      "keyWeaknesses": null,
+                      "questionsOrGeneralComments": null
+                  },
+                  "user_id": 212121,
+                  "history_id": 871,
+                  "type": "Office",
+                  "result": null,
+                  "user": {
+                      "id": 212121,
+                      "login_id": "anna101",
+                      "email": "anna101@test.com",
+                      "first_name": "Anna",
+                      "last_name": "101"
+                  }
+              },
+              {
+                  "id": "66c06ffa-5c85-43d8-9a23-ca547f8c05d5",
+                  "timestamp_answer": "2024-05-07T00:20:59.899Z",
+                  "timestamp_request": "2024-05-06T10:21:36.971Z",
+                  "comment": null,
+                  "data": {
+                      "main_applicants": [
+                          {
+                              "id": 8283,
+                              "study_id": 117,
+                              "user_id": 212121,
+                              "role_id": "applicant",
+                              "function": "Writer",
+                              "freetext": null,
+                              "association": null,
+                              "self_support_group": null,
+                              "affiliation": null,
+                              "other_affiliation": null,
+                              "telephone": "789789",
+                              "title": "Dr.",
+                              "main": true,
+                              "study_user_instituts": [
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 2,
+                                      "role_id": "studySite",
+                                      "institute": {
+                                          "id": 2,
+                                          "name": "Site Heidelberg",
+                                          "inactive": false,
+                                          "mail": [
+                                              "karolina@test.de",
+                                              "peter@test.de",
+                                              "coordination@test.de"
+                                          ],
+                                          "type": null
+                                      }
+                                  },
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 8,
+                                      "role_id": "userInstitut",
+                                      "institute": {
+                                          "id": 8,
+                                          "name": "US NOW",
+                                          "inactive": false,
+                                          "mail": null,
+                                          "type": null
+                                      }
+                                  }
+                              ],
+                              "user": {
+                                  "id": 212121,
+                                  "login_id": "anna101",
+                                  "email": "anna101@test.com",
+                                  "first_name": "Anna",
+                                  "last_name": "101"
+                              }
+                          }
+                      ],
+                      "study_sites": [
+                          {
+                              "id": 10092,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 19,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 19,
+                                  "name": "Site Berlin",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "piwonia@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10093,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 2,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 2,
+                                  "name": "Site Heidelberg",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "peter@test.de",
+                                      "coordination@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10094,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 16,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 16,
+                                  "name": "Site Dresden",
+                                  "inactive": false,
+                                  "mail": [
+                                      "hs@test.de",
+                                      "ks@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          }
+                      ],
+                      "evaluationCriteriaRating": [
+                          {
+                              "criterium": "Medical need",
+                              "level": 2
+                          },
+                          {
+                              "criterium": "scientific competitiveness",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Existance of preparatory work",
+                              "level": 2
+                          },
+                          {
+                              "criterium": "Innovation",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Contribution to Science",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Overall judgement",
+                              "level": 3
+                          }
+                      ],
+                      "acronym": "007- Anna - Testing",
+                      "title": "Anna - April Testing (ENG)",
+                      "date_submission": "2024-04-26T08:49:37.597Z",
+                      "conflictOfInterest": false,
+                      "keyStrengths": {
+                          "type": "doc",
+                          "content": [
+                              {
+                                  "type": "paragraph",
+                                  "attrs": {
+                                      "align": null
+                                  },
+                                  "content": [
+                                      {
+                                          "type": "text",
+                                          "text": "testing ticket 1825"
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      "keyWeaknesses": null,
+                      "questionsOrGeneralComments": null
+                  },
+                  "user_id": 14245,
+                  "history_id": 871,
+                  "type": "Primary reviewer (outside expertise)",
+                  "result": null,
+                  "user": {
+                      "id": 14245,
+                      "login_id": "tester1",
+                      "email": "tester1@test.com",
+                      "first_name": "Tester",
+                      "last_name": "One"
+                  }
+              },
+              {
+                  "id": "8257b2d4-3db1-4751-97ff-254a830d9941",
+                  "timestamp_answer": "2024-05-07T00:23:16.044Z",
+                  "timestamp_request": "2024-05-07T00:23:15.994Z",
+                  "comment": null,
+                  "data": {
+                      "main_applicants": [
+                          {
+                              "id": 8283,
+                              "study_id": 117,
+                              "user_id": 212121,
+                              "role_id": "applicant",
+                              "function": "Writer",
+                              "freetext": null,
+                              "association": null,
+                              "self_support_group": null,
+                              "affiliation": null,
+                              "other_affiliation": null,
+                              "telephone": "789789",
+                              "title": "Dr.",
+                              "main": true,
+                              "study_user_instituts": [
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 2,
+                                      "role_id": "studySite",
+                                      "institute": {
+                                          "id": 2,
+                                          "name": "Site Heidelberg",
+                                          "inactive": false,
+                                          "mail": [
+                                              "karolina@test.de",
+                                              "peter@test.de",
+                                              "coordination@test.de"
+                                          ],
+                                          "type": null
+                                      }
+                                  },
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 8,
+                                      "role_id": "userInstitut",
+                                      "institute": {
+                                          "id": 8,
+                                          "name": "US NOW",
+                                          "inactive": false,
+                                          "mail": null,
+                                          "type": null
+                                      }
+                                  }
+                              ],
+                              "user": {
+                                  "id": 212121,
+                                  "login_id": "anna101",
+                                  "email": "anna101@test.com",
+                                  "first_name": "Anna",
+                                  "last_name": "101"
+                              }
+                          }
+                      ],
+                      "study_sites": [
+                          {
+                              "id": 10092,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 19,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 19,
+                                  "name": "Site Berlin",
+                                 "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "piwonia@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10093,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 2,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 2,
+                                  "name": "Site Heidelberg",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "peter@test.de",
+                                      "coordination@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10094,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 16,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 16,
+                                  "name": "Site Dresden",
+                                  "inactive": false,
+                                  "mail": [
+                                      "hs@test.de",
+                                      "ks@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          }
+                      ],
+                      "evaluationCriteriaRating": [
+                          {
+                              "criterium": "Medical need",
+                              "level": 4
+                          },
+                          {
+                              "criterium": "scientific competitiveness",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Existance of preparatory work",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Innovation",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Contribution to Science",
+                              "level": 1
+                          },
+                          {
+                              "criterium": "Overall judgement",
+                              "level": 3
+                          }
+                      ],
+                      "acronym": "007- Anna - Testing",
+                      "title": "Anna - April Testing (ENG)",
+                      "date_submission": "2024-04-26T08:49:37.597Z",
+                      "conflictOfInterest": false,
+                      "keyStrengths": null,
+                      "keyWeaknesses": {
+                          "type": "doc",
+                          "content": [
+                              {
+                                  "type": "paragraph",
+                                  "attrs": {
+                                      "align": null
+                                  },
+                                  "content": [
+                                      {
+                                          "type": "text",
+                                          "text": "testing ticket 1825"
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      "questionsOrGeneralComments": null
+                  },
+                  "user_id": 6969,
+                  "history_id": 871,
+                  "type": null,
+                  "result": null,
+                  "user": {
+                      "id": 6969,
+                      "login_id": "Legen",
+                      "email": "Legen.Dary@test.com",
+                      "first_name": "Legen",
+                      "last_name": "Dary"
+                  }
+              },
+              {
+                  "id": "0d582a18-081e-412b-a3e9-0aa5c21cfab1",
+                  "timestamp_answer": null,
+                  "timestamp_request": "2024-05-07T11:53:13.205Z",
+                  "comment": null,
+                  "data": {
+                      "main_applicants": [
+                          {
+                              "id": 8283,
+                              "study_id": 117,
+                              "user_id": 212121,
+                              "role_id": "applicant",
+                              "function": "Writer",
+                              "freetext": null,
+                              "association": null,
+                              "self_support_group": null,
+                              "affiliation": null,
+                              "other_affiliation": null,
+                              "telephone": "789789",
+                              "title": "Dr.",
+                              "main": true,
+                              "study_user_instituts": [
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 2,
+                                      "role_id": "studySite",
+                                      "institute": {
+                                          "id": 2,
+                                          "name": "Site Heidelberg",
+                                          "inactive": false,
+                                          "mail": [
+                                              "karolina@test.de",
+                                              "peter@test.de",
+                                              "coordination@test.de"
+                                          ],
+                                          "type": null
+                                      }
+                                  },
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 8,
+                                      "role_id": "userInstitut",
+                                      "institute": {
+                                          "id": 8,
+                                          "name": "US NOW",
+                                          "inactive": false,
+                                          "mail": null,
+                                          "type": null
+                                      }
+                                  }
+                              ],
+                              "user": {
+                                  "id": 212121,
+                                  "login_id": "anna101",
+                                  "email": "anna101@test.com",
+                                  "first_name": "Anna",
+                                  "last_name": "101"
+                              }
+                          }
+                      ],
+                      "study_sites": [
+                          {
+                              "id": 10092,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 19,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 19,
+                                  "name": "Site Berlin",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "piwonia@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10093,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 2,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 2,
+                                  "name": "Site Heidelberg",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "peter@test.de",
+                                      "coordination@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10094,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 16,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 16,
+                                  "name": "Site Dresden",
+                                  "inactive": false,
+                                  "mail": [
+                                      "hs@test.de",
+                                      "ks@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          }
+                      ],
+                      "evaluationCriteriaRating": [
+                          {
+                              "criterium": "Medical need",
+                              "level": 3.33
+                          },
+                          {
+                              "criterium": "scientific competitiveness",
+                              "level": 3.33
+                          },
+                          {
+                              "criterium": "Existance of preparatory work",
+                              "level": 2.33
+                          },
+                          {
+                              "criterium": "Innovation",
+                              "level": 2.67
+                          },
+                          {
+                              "criterium": "Contribution to Science",
+                              "level": 2.33
+                          },
+                          {
+                              "criterium": "Overall judgement",
+                             "level": 3
+                          },
+                          {
+                              "criterium": "Average of All Criteria",
+                              "level": 2.83
+                          }
+                      ],
+                      "acronym": "007- Anna - Testing",
+                      "title": "Anna - April Testing (ENG)",
+                      "date_submission": "2024-04-26T08:49:37.597Z",
+                      "keyStrengths": null,
+                      "keyWeaknesses": null,
+                      "questionsOrGeneralComments": null
+                  },
+                  "user_id": 212121,
+                  "history_id": 871,
+                  "type": "Office",
+                  "result": null,
+                  "user": {
+                      "id": 212121,
+                      "login_id": "anna101",
+                      "email": "anna101@test.com",
+                      "first_name": "Anna",
+                      "last_name": "101"
+                  }
+              },
+              {
+                  "id": "71eb481c-2147-4d2c-a5c1-8c6116d23be8",
+                  "timestamp_answer": null,
+                  "timestamp_request": "2024-05-07T11:53:12.234Z",
+                  "comment": null,
+                  "data": {
+                      "main_applicants": [
+                          {
+                              "id": 8283,
+                              "study_id": 117,
+                              "user_id": 212121,
+                              "role_id": "applicant",
+                              "function": "Writer",
+                              "freetext": null,
+                              "association": null,
+                              "self_support_group": null,
+                              "affiliation": null,
+                              "other_affiliation": null,
+                              "telephone": "789789",
+                              "title": "Dr.",
+                              "main": true,
+                              "study_user_instituts": [
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 2,
+                                      "role_id": "studySite",
+                                      "institute": {
+                                          "id": 2,
+                                          "name": "Site Heidelberg",
+                                          "inactive": false,
+                                          "mail": [
+                                              "karolina@test.de",
+                                              "peter@test.de",
+                                              "coordination@test.de"
+                                          ],
+                                          "type": null
+                                      }
+                                  },
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 8,
+                                      "role_id": "userInstitut",
+                                      "institute": {
+                                          "id": 8,
+                                          "name": "US NOW",
+                                          "inactive": false,
+                                          "mail": null,
+                                          "type": null
+                                      }
+                                  }
+                              ],
+                              "user": {
+                                  "id": 212121,
+                                  "login_id": "anna101",
+                                  "email": "anna101@test.com",
+                                  "first_name": "Anna",
+                                  "last_name": "101"
+                              }
+                          }
+                      ],
+                      "study_sites": [
+                          {
+                              "id": 10092,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 19,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 19,
+                                  "name": "Site Berlin",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "piwonia@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10093,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 2,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 2,
+                                  "name": "Site Heidelberg",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "peter@test.de",
+                                      "coordination@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10094,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 16,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 16,
+                                  "name": "Site Dresden",
+                                  "inactive": false,
+                                  "mail": [
+                                      "hs@test.de",
+                                      "ks@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          }
+                      ],
+                      "evaluationCriteriaRating": [
+                          {
+                              "criterium": "Medical need",
+                              "level": 3.33
+                          },
+                          {
+                              "criterium": "scientific competitiveness",
+                              "level": 3.33
+                          },
+                          {
+                              "criterium": "Existance of preparatory work",
+                              "level": 2.33
+                          },
+                          {
+                              "criterium": "Innovation",
+                              "level": 2.67
+                          },
+                          {
+                              "criterium": "Contribution to Science",
+                              "level": 2.33
+                          },
+                          {
+                              "criterium": "Overall judgement",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Average of All Criteria",
+                              "level": 2.83
+                          }
+                      ],
+                      "acronym": "007- Anna - Testing",
+                      "title": "Anna - April Testing (ENG)",
+                      "date_submission": "2024-04-26T08:49:37.597Z",
+                      "keyStrengths": null,
+                      "keyWeaknesses": null,
+                      "questionsOrGeneralComments": null
+                  },
+                  "user_id": 212121,
+                  "history_id": 871,
+                  "type": "Office",
+                  "result": null,
+                  "user": {
+                      "id": 212121,
+                      "login_id": "anna101",
+                      "email": "anna101@test.com",
+                      "first_name": "Anna",
+                      "last_name": "101"
+                  }
+              },
+              {
+                  "id": "4d4f4c08-0b08-4946-80bb-0071b2db55c8",
+                  "timestamp_answer": null,
+                  "timestamp_request": "2024-05-06T10:21:36.963Z",
+                  "comment": null,
+                  "data": null,
+                  "user_id": 1010,
+                  "history_id": 871,
+                  "type": "Primary reviewer",
+                  "result": null,
+                  "user": {
+                      "id": 1010,
+                      "login_id": "chris202",
+                      "email": "chris.prat@test.com",
+                      "first_name": "Chris",
+                      "last_name": "Prat"
+                  }
+              },
+              {
+                  "id": "8d171d76-2996-4060-bd5a-cb16ecc013ea",
+                  "timestamp_answer": "2024-05-17T07:11:12.443Z",
+                  "timestamp_request": "2024-05-06T10:21:36.954Z",
+                  "comment": null,
+                  "data": {
+                      "main_applicants": [
+                          {
+                              "id": 8283,
+                              "study_id": 117,
+                              "user_id": 212121,
+                              "role_id": "applicant",
+                              "function": "Writer",
+                              "freetext": null,
+                              "association": null,
+                              "self_support_group": null,
+                              "affiliation": null,
+                              "other_affiliation": null,
+                              "telephone": "789789",
+                              "title": "Dr.",
+                              "main": true,
+                              "study_user_instituts": [
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 2,
+                                      "role_id": "studySite",
+                                      "institute": {
+                                          "id": 2,
+                                          "name": "Site Heidelberg",
+                                          "inactive": false,
+                                          "mail": [
+                                              "karolina@test.de",
+                                              "peter@test.de",
+                                              "coordination@test.de"
+                                          ],
+                                          "type": null
+                                      }
+                                  },
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 8,
+                                      "role_id": "userInstitut",
+                                      "institute": {
+                                          "id": 8,
+                                          "name": "US NOW",
+                                          "inactive": false,
+                                          "mail": null,
+                                          "type": null
+                                      }
+                                  }
+                              ],
+                              "user": {
+                                  "id": 212121,
+                                  "login_id": "anna101",
+                                  "email": "anna101@test.com",
+                                  "first_name": "Anna",
+                                  "last_name": "101"
+                              }
+                          }
+                      ],
+                      "study_sites": [
+                          {
+                              "id": 10092,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 19,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 19,
+                                  "name": "Site Berlin",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "piwonia@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10093,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 2,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 2,
+                                  "name": "Site Heidelberg",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "peter@test.de",
+                                      "coordination@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10094,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 16,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 16,
+                                  "name": "Site Dresden",
+                                  "inactive": false,
+                                  "mail": [
+                                      "hs@test.de",
+                                      "ks@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          }
+                      ],
+                      "evaluationCriteriaRating": [
+                          {
+                              "criterium": "Medical need",
+                              "level": 5
+                          },
+                          {
+                              "criterium": "scientific competitiveness",
+                              "level": 4
+                          },
+                          {
+                              "criterium": "Existance of preparatory work",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Innovation",
+                              "level": 2
+                          },
+                          {
+                              "criterium": "Contribution to Science",
+                              "level": 1
+                          },
+                          {
+                              "criterium": "Overall judgement",
+                              "level": 3
+                          }
+                      ],
+                      "acronym": "007- Anna - Testing",
+                      "title": "Anna - April Testing (ENG)",
+                      "date_submission": "2024-04-26T08:49:37.597Z",
+                      "conflictOfInterest": false,
+                      "keyStrengths": null,
+                      "keyWeaknesses": null,
+                      "questionsOrGeneralComments": null
+                  },
+                  "user_id": 212121,
+                  "history_id": 871,
+                  "type": "Lead primary reviewer",
+                  "result": null,
+                  "user": {
+                      "id": 212121,
+                      "login_id": "anna101",
+                      "email": "anna101@test.com",
+                      "first_name": "Anna",
+                      "last_name": "101"
+                  }
+              },
+              {
+                  "id": "b930c42b-0b60-4d87-b509-a12ed25f698c",
+                  "timestamp_answer": "2024-05-07T00:27:39.272Z",
+                  "timestamp_request": "2024-05-07T00:27:39.227Z",
+                  "comment": null,
+                  "data": {
+                      "main_applicants": [
+                          {
+                              "id": 8283,
+                              "study_id": 117,
+                              "user_id": 212121,
+                              "role_id": "applicant",
+                              "function": "Writer",
+                              "freetext": null,
+                              "association": null,
+                              "self_support_group": null,
+                              "affiliation": null,
+                              "other_affiliation": null,
+                              "telephone": "789789",
+                              "title": "Dr.",
+                              "main": true,
+                              "study_user_instituts": [
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 2,
+                                      "role_id": "studySite",
+                                      "institute": {
+                                          "id": 2,
+                                          "name": "Site Heidelberg",
+                                          "inactive": false,
+                                          "mail": [
+                                              "karolina@test.de",
+                                              "peter@test.de",
+                                              "coordination@test.de"
+                                          ],
+                                          "type": null
+                                      }
+                                  },
+                                  {
+                                      "study_user_id": 8283,
+                                      "institute_id": 8,
+                                      "role_id": "userInstitut",
+                                      "institute": {
+                                          "id": 8,
+                                          "name": "US NOW",
+                                          "inactive": false,
+                                          "mail": null,
+                                          "type": null
+                                      }
+                                  }
+                              ],
+                              "user": {
+                                  "id": 212121,
+                                  "login_id": "anna101",
+                                  "email": "anna101@test.com",
+                                  "first_name": "Anna",
+                                  "last_name": "101"
+                              }
+                          }
+                      ],
+                      "study_sites": [
+                          {
+                              "id": 10092,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 19,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 19,
+                                  "name": "Site Berlin",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "piwonia@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10093,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 2,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 2,
+                                  "name": "Site Heidelberg",
+                                  "inactive": false,
+                                  "mail": [
+                                      "karolina@test.de",
+                                      "peter@test.de",
+                                      "coordination@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          },
+                          {
+                              "id": 10094,
+                              "role_id": "studySite",
+                              "study_id": 117,
+                              "institute_id": 16,
+                              "enrollment": null,
+                              "patients_allocated": null,
+                              "patients_eligible": null,
+                              "parent_id": null,
+                              "institute": {
+                                  "id": 16,
+                                  "name": "Site Dresden",
+                                  "inactive": false,
+                                  "mail": [
+                                      "hs@test.de",
+                                      "ks@test.de"
+                                  ],
+                                  "type": null
+                              },
+                              "parent": null,
+                              "files": []
+                          }
+                      ],
+                      "evaluationCriteriaRating": [
+                          {
+                              "criterium": "Medical need",
+                              "level": 4
+                          },
+                          {
+                              "criterium": "scientific competitiveness",
+                              "level": 4
+                          },
+                          {
+                              "criterium": "Existance of preparatory work",
+                              "level": 2
+                          },
+                          {
+                              "criterium": "Innovation",
+                              "level": 2
+                          },
+                          {
+                              "criterium": "Contribution to Science",
+                              "level": 3
+                          },
+                          {
+                              "criterium": "Overall judgement",
+                              "level": 3
+                          }
+                      ],
+                      "acronym": "007- Anna - Testing",
+                      "title": "Anna - April Testing (ENG)",
+                      "date_submission": "2024-04-26T08:49:37.597Z",
+                      "conflictOfInterest": false,
+                      "keyStrengths": null,
+                      "keyWeaknesses": {
+                          "type": "doc",
+                          "content": [
+                              {
+                                  "type": "paragraph",
+                                  "attrs": {
+                                      "align": null
+                                  },
+                                  "content": [
+                                      {
+                                          "type": "text",
+                                          "text": "Testing "
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      "questionsOrGeneralComments": null
+                  },
+                  "user_id": 1414,
+                  "history_id": 871,
+                  "type": null,
+                  "result": null,
+                  "user": {
+                      "id": 1414,
+                      "login_id": "tester3",
+                      "email": "tester.three@test.com",
+                      "first_name": "Third",
+                      "last_name": "Tester"
+                  }
+              }
+          ]
+      },
+      {
+          "id": 870,
+          "study_id": 117,
+          "status": "TSB Prioritization Ready",
+          "start_time": "2024-05-06T10:21:08.328Z",
+          "user_login_id": "anna101",
+          "start_data": {
+              "id": 117,
+              "external_id": "2024-04-19-5",
+              "title": "Anna - April Testing (ENG)",
+              "summary": {
+                  "type": "doc",
+                  "content": [
+                      {
+                          "type": "paragraph",
+                          "attrs": {
+                              "align": null
+                          },
+                          "content": [
+                              {
+                                  "type": "text",
+                                  "marks": [
+                                      {
+                                          "type": "text_color",
+                                          "attrs": {
+                                              "color": "rgb(97, 79, 65)"
+                                          }
+                                      },
+                                      {
+                                          "type": "text_background_color",
+                                          "attrs": {
+                                              "backgroundColor": "rgb(255, 255, 255)"
+                                          }
+                                      }
+                                  ],
+                                  "text": "Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese."
+                              }
+                          ]
+                      }
+                  ]
+              },
+              "de_title": "Anna - April Testing (DE)",
+              "de_summary": {
+                  "type": "doc",
+                  "content": [
+                      {
+                         "type": "paragraph",
+                          "attrs": {
+                              "align": null
+                          },
+                          "content": [
+                              {
+                                  "type": "text",
+                                  "marks": [
+                                      {
+                                          "type": "text_color",
+                                          "attrs": {
+                                              "color": "rgb(97, 79, 65)"
+                                          }
+                                      },
+                                      {
+                                          "type": "text_background_color",
+                                          "attrs": {
+                                              "backgroundColor": "rgb(255, 255, 255)"
+                                          }
+                                      }
+                                  ],
+                                  "text": "Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese."
+                              }
+                          ]
+                      }
+                  ]
+              },
+              "sponsored_portfolio": "infrastructure",
+              "keywords": [
+                  "super",
+                  "nice",
+                  "trial",
+                  "synopsis",
+                  "testing"
+              ],
+              "other_lega_sponsor": null,
+              "pei_involved": false,
+              "bfarm_involved": false,
+              "bfsinvolved": false,
+              "mdr_class": null,
+              "ivdr_class": null,
+              "authority_submission": [
+                  "High Authority"
+              ],
+              "ethics_committee_involved": true,
+              "hypotheses": {
+                  "type": "doc",
+                  "content": "a very good hypotesist in not so many words" 
+              },
+              "implementation": {
+                  "type": "doc",
+                  "content": [
+                      {
+                          "type": "paragraph",
+                          "attrs": {
+                              "align": null
+                          },
+                          "content": [
+                              {
+                                  "type": "text",
+                                  "marks": [
+                                      {
+                                          "type": "text_color",
+                                          "attrs": {
+                                              "color": "rgb(97, 79, 65)"
+                                          }
+                                      },
+                                      {
+                                          "type": "text_background_color",
+                                          "attrs": {
+                                              "backgroundColor": "rgb(255, 255, 255)"
+                                          }
+                                      }
+                                  ],
+                                  "text": "Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese.Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese.Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese."
+                              }
+                          ]
+                      }
+                  ]
+              },
+              "other_intervention_type": null,
+              "other_primary_purpose": null,
+              "interventional_study_model": "single arm",
+              "observational_study_model": null,
+ 
+              "other_name": null,
+ 
+              "test_accuracy": null,
+              "accuracy_description": null,
+              "safety": null,
+              "secondary_endpoint": null,
+              "patient_eligibility": "555",
+              "patient_eligibilitytype": null,
+              "patient_allocated": "444",
+              "patient_allocatedtype": null,
+ 
+              "patient_analyzed": "222",
+              "patient_analyzedtype": null,
+              "recruitment_start_date": null,
+              "recruitment_start_date_type": null,
+             "recruitment_completion_date": null,
+              "recruitment_completion_date_type": null,
+              "recruitment_start_relative_value": null,
+              "recruitment_start_relative_unit": null,
+              "recruitment_completion_relative_value": null,
+              "recruitment_completion_relative_unit": null,
+              "follow_up": null,
+              "trial_outline": {
+                  "type": "doc",
+                  "content": [
+                      {
+                          "type": "paragraph",
+                          "attrs": {
+                              "align": null
+                          },
+                          "content": [
+                              {
+                                  "type": "text",
+                                  "marks": [
+                                      {
+                                          "type": "text_color",
+                                          "attrs": {
+                                              "color": "rgb(97, 79, 65)"
+                                          }
+                                      },
+                                      {
+                                          "type": "text_background_color",
+                                          "attrs": {
+                                              "backgroundColor": "rgb(255, 255, 255)"
+                                          }
+                                      }
+                                  ],
+                                  "text": "Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese."
+                              }
+                          ]
+                      }
+                  ]
+              },
+   
+    
+              "acronym": "007- Anna - Testing",
+              "mpgClass": null,
+              "enrollment": null,
+              "international": null,
+              "startDate": null,
+              "completionDate": null,
+              "completion_relative_value": null,
+              "completion_relative_unit": null,
+              "fundingAmmount": null,
+              "status": null,
+              "completionDateType": null,
+              "startDateType": null,
+              "enrollmentType": null,
+              "epidemiological": null,
+              "type": "Interventional",
+              "interventionType": [
+                  "Device"
+              ],
+              "dealingWith": null,
+              "randomized": null,
+              "interventionModel": null,
+              "controlGroup": null,
+              "treatmentForm": "Prevention",
+              "therapyLine": null,
+              "inclusionCriteria": null,
+              "exclusionCriteria": null,
+ 
+ 
+
+              "fundingCurrency": "Euro",
+              "timestamp": "2024-04-30T07:46:59.553Z",
+              "researchTopic": null,
+              "documentation_status": "First Review",
+              "molecular_markers": null,
+              "indications": [
+                  "Breast Cancer"
+              ],
+              "funding_type": null,
+              "number_of_arms": null,
+              "number_of_arms_type": null,
+              "total_cost": null,
+              "has_external_partner": false,
+              "is_other": false,
+              "other_control_group": null,
+              "min_age": -1,
+              "max_age": -1,
+              "min_age_unit": null,
+              "max_age_unit": null,
+              "gender": [
+                  "female"
+              ],
+ 
+              "funding_start_date": null,
+              "funding_completion_date": null,
+              "funding_start_date_type": null,
+              "funding_completion_date_type": null,
+              "other": null,
+              "prt": [
+                  "Precision Local Therapy"
+              ],
+              "pda": [
+                  "Brain"
+              ],
+              "other_prt": null,
+              "other_pda": null,
+              "planned_patent": "n.a.",
+              "study_idea": "Parental institution",
+              "planned_patent_freetext": null,
+
+              "authority_submission_text": null,
+              "ethics_commitee_text": null,
+              "pei_text": null,
+              "bfarm_text": null,
+              "bfs_text": null,
+              "other_text": null,
+              "strategy_enrollment": {
+                  "type": "doc",
+                  "content": [
+                      {
+                          "type": "paragraph",
+                          "attrs": {
+                              "align": null
+                          },
+                          "content": [
+                              {
+                                  "type": "text",
+                                  "marks": [
+                                      {
+                                          "type": "text_color",
+                                          "attrs": {
+                                              "color": "rgb(97, 79, 65)"
+                                          }
+                                      },
+                                      {
+                                          "type": "text_background_color",
+                                          "attrs": {
+                                              "backgroundColor": "rgb(255, 255, 255)"
+                                          }
+                                      }
+                                  ],
+                                  "text": "Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese.Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese.Cheese and biscuits cream cheese cheesy grin. The big cheese paneer airedale chalk and cheese red leicester cauliflower cheese red leicester edam. Camembert de normandie blue castello squirty cheese paneer melted cheese stinking bishop who moved my cheese airedale. Roquefort pepper jack paneer emmental taleggio croque monsieur taleggio hard cheese. Stinking bishop who moved my cheese."
+                              }
+                          ]
+                      }
+                  ]
+              },
+              "study_users": [
+                  {
+                      "id": 8282,
+                      "study_id": 117,
+                      "user_id": 212121,
+                      "role_id": "documentalist",
+                      "function": null,
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": null,
+                      "title": null,
+                      "main": null,
+                      "user": {
+                          "id": 212121,
+                          "login_id": "anna101",
+                          "email": "anna101@test.com",
+                          "first_name": "Anna",
+                          "last_name": "101"
+                      }
+                  },
+                  {
+                      "id": 8284,
+                      "study_id": 117,
+                      "user_id": 5555,
+                      "role_id": "applicant",
+                      "function": "Tester",
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": "456456",
+                      "title": null,
+                      "main": null,
+                      "user": {
+                          "id": 5555,
+                          "login_id": "tina",
+                          "email": "tina.bena@test.com",
+                          "first_name": "Tina",
+                          "last_name": "Bena"
+                      }
+                  },
+                  {
+                      "id": 8286,
+                      "study_id": 117,
+                      "user_id": 1515,
+                      "role_id": "patientInvolvement",
+                      "function": null,
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": null,
+                      "title": "Prof.",
+                      "main": null,
+                      "user": {
+                          "id": 1515,
+                          "login_id": null,
+                          "email": "dell.awesome@test.de",
+                          "first_name": "Dell",
+                          "last_name": "Awesome"
+                      }
+                  },
+                  {
+                      "id": 8281,
+                      "study_id": 117,
+                      "user_id": 212121,
+                      "role_id": "documentalist",
+                      "function": null,
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": null,
+                      "title": null,
+                      "main": null,
+                      "user": {
+                          "id": 212121,
+                          "login_id": "anna101",
+                          "email": "anna101@test.com",
+                          "first_name": "Anna",
+                          "last_name": "101"
+                      }
+                  },
+                  {
+                      "id": 8283,
+                      "study_id": 117,
+                      "user_id": 212121,
+                      "role_id": "applicant",
+                      "function": "Writer",
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": "789789",
+                      "title": "Dr.",
+                      "main": true,
+                      "user": {
+                          "id": 212121,
+                          "login_id": "anna101",
+                          "email": "anna101@test.com",
+                          "first_name": "Anna",
+                          "last_name": "101"
+                      }
+                  },
+                  {
+                      "id": 8285,
+                      "study_id": 117,
+                      "user_id": 1010,
+                      "role_id": "applicant",
+                      "function": "Architect",
+                      "freetext": null,
+                      "association": null,
+                      "self_support_group": null,
+                      "affiliation": null,
+                      "other_affiliation": null,
+                      "telephone": "123123",
+                      "title": null,
+                      "main": null,
+                      "user": {
+                          "id": 1010,
+                          "login_id": "chris202",
+                          "email": "chris.prat@test.com",
+                          "first_name": "Chris",
+                          "last_name": "Prat"
+                      }
+                  }
+              ],
+              "files": []
+          },
+          "chat_id": null,
+          "signments": [
+              {
+                  "id": "1086aa4e-6a9c-497e-955a-71ffe4ef0a2d",
+                  "timestamp_answer": null,
+                  "timestamp_request": "2024-05-06T10:21:36.747Z",
+                  "comment": null,
+                  "data": {
+                      "date": "2024-05-15T00:00:00.000Z"
+                  },
+                  "user_id": 212121,
+                  "history_id": 870,
+                  "type": "Office",
+                  "result": null,
+                  "user": {
+                      "id": 212121,
+                      "login_id": "anna101",
+                      "email": "anna101@test.com",
+                      "first_name": "Anna",
+                      "last_name": "101"
+                  }
+              }
+          ]
+      }
+  ],
+  "editable": false,
+  "hasChat": false,
+  "date_submission": "2024-04-26T08:49:37.597Z"
+}

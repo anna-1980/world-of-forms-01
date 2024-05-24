@@ -1,16 +1,15 @@
 @import '../styles.scss'; 
 
 .content{
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
   background-color: map-get(map-get($colors, grey), light);
   color: map-get(map-get($colors, grey), dark);
   font-size: 2em;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+ 
 }

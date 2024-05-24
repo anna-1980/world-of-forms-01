@@ -1,13 +1,15 @@
 <div class="container">
   <nav class="navigation">
 
-    <a class="navigation-link" routerLink="/">
+    <a class="navigation-link" routerLink="/home" [routerLinkActive]="'active-link'"  >
       <button class="navigation-btn">Home</button></a>
-    <a class="navigation-link" routerLink="/users">
+    <a class="navigation-link" routerLink="/users" [routerLinkActive]="'active-link'" >
       <button class="navigation-btn">Users</button></a>
-    <a class="navigation-link" routerLink="/meetings">
+    <a class="navigation-link" routerLink="/meetings" [routerLinkActive]="'active-link'" >
       <button class="navigation-btn">Meetings</button></a>
-   
+    <a class="navigation-link" routerLink="/data"
+      [routerLinkActive]="'active-link'" >
+      <button class="navigation-btn">Data</button></a>
   </nav>
 
 </div>

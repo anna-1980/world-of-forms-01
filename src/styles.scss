@@ -1,13 +1,22 @@
+//reset
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 $colors: (
   green: (
     light: #64b664,
-    default: #008000,
+    default: #46982f,
     dark: #006400
   ),
   grey: (
     light: #ffffff,
     default: #808080,
-    dark: #2b2929
+    dark: #1a1818
   ),
   red: (
     light: #FF6347,
@@ -27,7 +36,9 @@ $colors: (
 
 );
 
+$shadow-tabs: 4px 2px 5px 0 rgba(0, 0, 0, 0.3);
 
+// functions
 @function toRem($size) {
   @return $size / 16 * 1rem;
 }
