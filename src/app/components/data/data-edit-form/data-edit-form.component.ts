@@ -59,14 +59,16 @@ export class DataEditFormComponent implements OnInit{
       keyWeaknesses: [''],
       evaluationCriteriaRating: levelArray
     });
+
+    console.log('log ', this.levelArray());
   }
 
-  createRating(): FormGroup {
-    return this.fb.group({
-      criterium: [''],
-      level: ['']
-    });
-  }
+  // createRating(): FormGroup {
+  //   return this.fb.group({
+  //     criterium: [''],
+  //     level: ['']
+  //   });
+  // }
 
   // addRating() {
   //   this.evaluationCriteriaRating.push(this.createRating());

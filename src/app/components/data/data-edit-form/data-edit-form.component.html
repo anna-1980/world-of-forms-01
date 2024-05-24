@@ -24,32 +24,13 @@
     <div class="row" *ngFor="let item of levelArray().controls">
       <label for="item"> {{item.get('criteriumType')?.value}}</label>
       
-        <div class="radio-group" [formControl]="toControl(item.get('level')!)">
-          <label>
-            <input type="radio" value="0"  >
-              <span>0</span>
-          </label>
-          <label>
-            <input type="radio" value="1"  >
-              <span>1</span>
-          </label>
-          <label>
-            <input type="radio" value="2"  >
-              <span>2</span>
-          </label>
-          <label>
-            <input type="radio" value="3"  >
-              <span>3</span>
-          </label>
-          <label>
-            <input type="radio" value="4"  >
-              <span>4</span>
-          </label>
-          <label>
-            <input type="radio" value="5"  >
-              <span>5</span>
-          </label>
-          
+        <div class="radio-group" >
+          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="0"  > 
+          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="1"  >
+          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="2"  >
+          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="3"  >
+          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="4"  >
+          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="5"  >
         </div>
 
     
