@@ -1,1 +1,29 @@
-<p>meetings works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Question</th>
+        <th>Answer</th>
+      </tr>
+    </thead>
+    <tbody formArrayName="rows">
+      <tr *ngFor="let row of form.get('rows')?.value; let i = index" [formGroupName]="i">
+
+        <td><input type="text" formControlName="description" readonly></td>
+        <td><input type="text" formControlName="question" readonly></td>
+        <td>
+          <select formControlName="answers">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="maybe">Maybe</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="submit">Submit</button>
+</form>
+
+<hr>
+<app-meetings-list></app-meetings-list>

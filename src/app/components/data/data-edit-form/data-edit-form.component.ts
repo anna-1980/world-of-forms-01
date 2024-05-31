@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { DataService } from '../data.service';
 
 type Level = { 
   criterium0: string,
@@ -31,17 +32,20 @@ export class DataEditFormComponent implements OnInit{
   ];
 
   level: Level = {
-    criterium0: 'Outstanding',
-    criterium1: 'Excellent',
-    criterium2: 'Very good',
-    criterium3: 'Average',
-    criterium4: 'Below average',
-    criterium5: 'Poor'
+    criterium0: 'Poor',
+    criterium1: 'Average',
+    criterium2: 'Good',
+    criterium3: 'Very good',
+    criterium4: 'Excellent',
+    criterium5: 'Outstanding'
   }
 
-  constructor(private fb: FormBuilder) {}
+  currentStudy!: any;
+
+  constructor(private fb: FormBuilder, private dataService: DataService) {}
 
   ngOnInit() {
+ 
     
     const levelArray: FormArray = this.fb.array([]);
 
@@ -57,10 +61,18 @@ export class DataEditFormComponent implements OnInit{
       result: [''],
       keyStrengths: [''],
       keyWeaknesses: [''],
-      evaluationCriteriaRating: levelArray
+      evaluationCriteriaRating:  this.fb.array([])
     });
 
-    console.log('log ', this.levelArray());
+    this.kindOfCriterium.forEach(criterium => {
+      const formGroup = this.fb.group({
+        criteriumType: [criterium],
+        level: [null, Validators.required]
+      });
+      (this.signmentForm.get('evaluationCriteriaRating') as FormArray).push(formGroup);
+    });
+
+    console.log('log ', this.signmentForm);
   }
 
   // createRating(): FormGroup {

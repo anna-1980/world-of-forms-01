@@ -1,4 +1,4 @@
-<form [formGroup]="signmentForm"  >
+<form class="data-form" [formGroup]="signmentForm"  >
   <label>
     Result:
     <input type="text" formControlName="result">
@@ -12,30 +12,49 @@
     <input type="text" formControlName="keyWeaknesses">
   </label>
  <br>
- <div class="radio-btn-error">
+ <div  >
     <div class="row">
-      <div class="row__label"  >
-        <span Evaluation is required></span>
-      </div>
-      <div class="row__header" *ngFor="let item of level | keyvalue">
-       <label>{{item.value }}</label>
-      </div>
-    </div>
-    <div class="row" *ngFor="let item of levelArray().controls">
-      <label for="item"> {{item.get('criteriumType')?.value}}</label>
-      
-        <div class="radio-group" >
-          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="0"  > 
-          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="1"  >
-          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="2"  >
-          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="3"  >
-          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="4"  >
-          <input type="radio" name="{{item.get('criteriumType')?.value}}" [value]="5"  >
+      <label class="row__header-label"> </label>
+      <div class="radio-group">
+
+        <div class="row__header" *ngFor="let item of level | keyvalue">
+         <label>{{item.value }}</label>
         </div>
-
-    
-
+      </div>
     </div>
+    <div formArrayName="evaluationCriteriaRating">
+      <div class="row" *ngFor="let item of evaluationCriteriaRating.controls; let i = index" [formGroupName]="i">
+        <label class="row__label" >{{ item.get('criteriumType')?.value }}</label>
+        <div class="radio-group">
+          <div class="radio-btn">
+            <span>0</span>
+            <input type="radio" [value]="0" formControlName="level">
+          </div>
+          <div class="radio-btn">
+            <span>1</span>
+            <input type="radio" [value]="1" formControlName="level">
+            </div>
+          <div class="radio-btn">
+            <span>2</span>
+            <input type="radio" [value]="2" formControlName="level">
+          </div>
+          <div class="radio-btn">
+            <span>3</span>
+            <input type="radio" [value]="3" formControlName="level">
+          </div>
+          <div class="radio-btn">
+            <span>4</span>
+            <input type="radio" [value]="4" formControlName="level">
+          </div>
+          <div class="radio-btn">
+            <span>5</span>
+            <input type="radio" [value]="5" formControlName="level">
+          </div>
+           
+        </div>
+      </div>
+    </div>
+   
  </div>
   <button (click)="onSubmit()">Submit</button>
 </form>
