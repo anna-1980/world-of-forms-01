@@ -1,4 +1,53 @@
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody formArrayName="rows">
+    <ng-container *ngFor="let answer of tableData">
+      <ng-container *ngFor="let row of answer.rows; let i = index">
+        <tr [formGroupName]="i">
+          <td><input type="text" formControlName="description" value="{{ row.description }}" readonly></td>
+          <td><input type="text" formControlName="question" value="{{ row.question }}" readonly></td>
+          <td>
+            <select formControlName="answers">
+              <option [value]="option" [selected]="row.answers === option" *ngFor="let option of ['yes', 'no', 'maybe']">{{ option }}</option>
+            </select>
+          </td>
+        </tr>
+      </ng-container>
+    </ng-container>
+  </tbody>
+</table>
+
+<hr>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Question</th>
+        <th>Answers</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody formArrayName="rows">
+      <tr *ngFor="let row of rows.controls; let i = index" [formGroupName]="i">
+        <td><input formControlName="description" /></td>
+        <td><input formControlName="question" /></td>
+        <td><input formControlName="answers" /></td>
+        <td><button type="button" (click)="removeRow(i)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" (click)="addRow()">Add Row</button>
+  <button type="submit">Submit</button>
+</form>
+
+<!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <table>
     <thead>
       <tr>
@@ -23,7 +72,7 @@
     </tbody>
   </table>
   <button type="submit">Submit</button>
-</form>
+</form> -->
 
 <hr>
 <app-meetings-list></app-meetings-list>

@@ -1,66 +1,107 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup, FormArray, FormControl, AbstractControl } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, FormArray, FormControl, AbstractControl, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MeetingsListComponent } from './meetings-list/meetings-list.component';
- 
-interface TableData {
+import { AnswerService } from '../../services/answers.service';
+
+
+interface TableDataRow {
   description: string;
   question: string;
   answers: string;
 }
 
+interface TableData {
+  id: number;
+  rows: TableDataRow[];
+}
 @Component({
   selector: 'app-meetings',
   standalone: true,
-  imports: [CommonModule, MeetingsListComponent, ReactiveFormsModule ],
+  imports: [CommonModule, HttpClientModule, ReactiveFormsModule, MeetingsListComponent],
   templateUrl: './meetings.component.html',
-  styleUrl: './meetings.component.scss'
+  styleUrls: ['./meetings.component.scss']
 })
 export class MeetingsComponent implements OnInit {
   form!: FormGroup;
-  tableData: TableData[]  = [  
-    { description: 'answer the following quesiotn', 
-  question: 'is rain made of water?', answers: 'yes' },
-    { description: 'solve the equation', question: '2x+3=5, is the answer 5?', answers: 'maybe' },
-    { description: 'answer the following quesiotn', question: 'is rain made of water?', answers: 'yes' },
-    { description: 'solve the equation', question: '2x+3=6, is the answer 5?', answers: 'no' },
-    { description: 'answer the following quesiotn', question: 'is rain made of water?', answers: 'yes' },
-  
-  ]
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  tableData: TableData[] = [];
 
+  constructor(private fb: FormBuilder, private http: HttpClientModule, private answerService: AnswerService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      id: Math.random(),
       rows: this.fb.array([])
+    });
+  
 
-      
+    this.answerService.getAnswers().subscribe((answers: TableData[]) => {
+      this.tableData = answers;
+      const rowsFormArray = this.form.get('rows') as FormArray;
+      this.tableData.forEach(tableDataItem => {
+        tableDataItem.rows.forEach(row => {
+          const newRow = this.fb.group({
+            description: [row.description],
+            question: [row.question],
+            answers: [row.answers]
+          });
+          rowsFormArray.push(newRow);
+        });
+      });
     });
 
-    const rowsFormArray = this.form.get('rows') as FormArray;
-    this.tableData.forEach(row => {
-      const newRow = this.fb.group({
-        description: [row.description],
-        question: [row.question],
-        answers: [row.answers]
+    this.fetchExistingAnswers();
+
+    console.log('Table data:', this.tableData);
+
+  }
+  fetchExistingAnswers() {
+    this.answerService.getAnswers().subscribe((answers: TableData[]) => {
+      this.tableData = answers;
+      const rowsFormArray = this.form.get('rows') as FormArray;
+      this.tableData.forEach(answer => {
+        answer.rows.forEach(row => {
+          const newRow = this.fb.group({
+            description: [row.description],
+            question: [row.question],
+            answers: [row.answers]
+          });
+          rowsFormArray.push(newRow);
+        });
       });
-      rowsFormArray.push(newRow); // Push the new row into the FormArray
     });
   }
+  
 
   onSubmit() {
-    // Get form values and send to JSON server
     const formData = this.form.value;
     console.log('Form values:', formData);
-    this.http.post('http://localhost:3000/answers', formData).subscribe(response => {
-      console.log('Data sent successfully:', response);
+    formData.rows.forEach((row: TableData) => {
+      this.answerService.updateAnswer(row.id, row).subscribe(response => {
+        console.log('Data updated successfully:', response);
+      });
     });
   }
 
   toControl(abstrCtrl: AbstractControl): FormControl {
     return abstrCtrl as FormControl;
+  }
 
+  get rows(): FormArray {
+    return this.form.get('rows') as FormArray;
+  }
+
+ 
+  addRow() {
+    const newRow = this.fb.group({
+      description: [''],
+      question: [''],
+      answers: ['']
+    });
+    this.rows.push(newRow);
+  }
+
+  removeRow(index: number) {
+    this.rows.removeAt(index);
   }
 }
