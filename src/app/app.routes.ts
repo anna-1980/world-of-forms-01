@@ -5,7 +5,7 @@ import { MeetingsComponent } from './components/meetings/meetings.component';
 import { HomeComponent } from './components/home/home.component';
 import { DataComponent } from './components/data/data.component';
 import { LoginComponent } from './components/forms/reactive-forms/login/login.component';
-import { RegisterComponent } from './components/forms/reactive-form/register/register.component';
+import { RegisterComponent } from './components/forms/reactive-forms/register/register.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},

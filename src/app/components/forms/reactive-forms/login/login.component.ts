@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DestroyRef, inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -8,6 +8,7 @@ import {
 import { FormService } from './form-service.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink  } from '@angular/router';
+import { debounceTime, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,33 @@ import { Router, RouterLink  } from '@angular/router';
 export class LoginComponent {
   loginFailed: boolean = false;
 
+  //This is a service provided by Angular that helps manage cleanup tasks 
+  private destroyRef = inject(DestroyRef);
+
   constructor(private formService: FormService) {}
+
+
+  ngOnInit() {
+
+    const savedLoginEmail = window.localStorage.getItem('loginForm-email');
+
+    if (savedLoginEmail){
+      const savedEmail = JSON.parse(savedLoginEmail);
+      this.loginForm.patchValue({
+        email: savedEmail.email
+      });
+    }
+
+    const  subscribeEmail = this.loginForm.valueChanges.pipe(debounceTime(500)).subscribe( {
+      next: (value) => {
+        window.localStorage.setItem('loginForm-email', JSON.stringify({email: value.email}));
+      }
+    });
+
+    this.destroyRef.onDestroy(() => {
+      subscribeEmail.unsubscribe();
+    });
+  }
 
   loginForm = new FormGroup({
     email: new FormControl('', {
