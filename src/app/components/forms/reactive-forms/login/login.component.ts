@@ -7,11 +7,12 @@ import {
 } from '@angular/forms';
 import { FormService } from './form-service.service';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink  } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })

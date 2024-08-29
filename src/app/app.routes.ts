@@ -10,11 +10,10 @@ import { RegisterComponent } from './components/forms/reactive-form/register/reg
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'users', component: UsersComponent , children: [
-    {path: 'login', component: LoginComponent}, 
-    {path: 'register', component: RegisterComponent}
-  ]
+  { path: 'users', component: UsersComponent  
   },
+  {path: 'login', component: LoginComponent}, 
+    {path: 'register', component: RegisterComponent},
   { path: 'meetings', component: MeetingsComponent },
   { path: 'data', component: DataComponent },
   // Redirect to home if no matching route is found

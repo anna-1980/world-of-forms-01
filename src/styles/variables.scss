@@ -1,6 +1,3 @@
-// @import "../styles.scss";
-$shadow-tabs: 4px 2px 5px 0 rgba(0, 0, 0, 0.3);
-
 $colors: (
   green: (
     light: #64b664,
@@ -11,6 +8,11 @@ $colors: (
     light: #ffffff,
     default: #808080,
     dark: #1a1818
+  ),
+  blue: (
+    light: #add8e6,
+    default: #0000ff,
+    dark: #00008b
   ),
   red: (
     light: #FF6347,
@@ -29,3 +31,9 @@ $colors: (
   ),
 
 );
+
+$shadow-tabs: 4px 2px 5px 0 rgba(0, 0, 0, 0.3);
+$btn-primary: map-get(map-get($colors, blue), light);
+$btn-secondary: map-get(map-get($colors, green), default);
+$btn-accent: map-get(map-get($colors, red), light);
+

@@ -19,10 +19,11 @@
       }
       </div>
 
-      <button (click)="onSubmit()" class="btn">Login</button>
+      <button (click)="onSubmit()" class="btn btn-primary">Login</button>
+      <span>&nbsp;</span>
+      <button type="button" [routerLink]="['/register']" class="btn btn-accent">Register</button>
 
      
   </div>
-  <button routerLink="/user/register" class="btn btn-register">Register</button>
 
 </form>
