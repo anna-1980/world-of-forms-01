@@ -1,21 +1,71 @@
 <p>register works!</p>
-<form   class="form">
+<form [formGroup]="registrationForm"  class="form">
   <p>Login</p>
 
   <div class="form-content">
     
     <div class="control ">
-      
+      <label for="email">Email</label>
+      <input [formControl]="registrationForm.controls.email" type="email" id="email" name="email" required [ngClass]="{'invalid': emailIsInvalid }" >
+      @if (emailIsInvalid) {
+        <div class="error">please enter a valid Email</div>
+      }
       </div>
 
-    <div class="control ">
-     
+      <div class="control-group" [formGroup]="registrationForm.controls.passwords">
+        <div class="control">
+          <label for="password">Password</label>
+          <input formControlName="password" type="password" id="password" name="password" required [ngClass]="{'invalid': passwordIsInvalid }" >
+          @if (passwordIsInvalid) {
+            <div class="error">please enter a valid password</div>
+          }
+          </div>
+    
+          <div class="control ">
+            <label for="confirmPassword">Confirm Password</label>
+            <input formControlName="confirmPassword" id="confirmPassword" name="confirmPassword" required [ngClass]="{'invalid': confirmPasswordIsInvalid }" >
+            @if (confirmPasswordIsInvalid) {
+              <div class="error">please enter a valid password</div>
+            }
+            </div>
       </div>
 
-      <button type="button" (click)="onSubmit()" class="btn btn-accent">Login</button>
- 
+        <div class="control">
+          <label for="role">What best describes your role</label>
+          <select [formControl]="registrationForm.controls.role" id="role" name="role" required [ngClass]="{'invalid': roleIsInvalid }">
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+              <option value="devOps">DevOps</option>
+              <option value="tester">Tester</option>
+              <option value="developer">Developer</option>
+            </select>
+        </div>
 
-     
-  </div>
-
+        <hr>
+        <div class="control">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required  formControlName="firstName">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required  formControlName="lastName">
+        </div>
+        <hr>
+        <div class="control"  >
+          <p for="address" >Address:</p>
+          <label for="street">Street</label>
+          <input type="text" id="street" name="street" required  formControlName="street">
+          <label for="number">City</label>
+          <input type="text" id="number" name="number" required  formControlName="number">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required  formControlName="city">
+          <label for="postalCode">Postal Code</label>
+          <input type="text" id="postalCode" name="postalCode" required  formControlName="postalCode">
+          </div>
+          <div class="control" style="flex-direction: row">
+            <p for="agree">I agree to the terms and conditions</p>
+            <input style="margin-left: 10px" type="checkbox" formControlName="agree">
+          </div>
+          
+       <button type="button" (click)="onSubmit()" class="btn btn-accent" [disabled]="!registrationForm.valid">Login</button>
+       
+        </div>
 </form>

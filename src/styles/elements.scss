@@ -13,6 +13,10 @@
     box-shadow: 4px 2px 8px 0 rgba(0, 0, 0, 0.3);
   }
 
+  &:disabled{
+    filter: grayscale(1);
+  }
+
   &-primary{
     background-color: $btn-primary;
     color: map-get(map-get($colors, blue), dark);
