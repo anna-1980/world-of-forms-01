@@ -72,17 +72,19 @@
     </div>
   </div>
 
-  <!-- Company Details Form Group -->
-  <div formGroupName="companyDetails">
-    <p>Company Details</p>
-    <div class="control">
-      <label for="companyName">Company Name</label>
-      <input id="companyName" formControlName="companyName" required />
-      <div *ngIf="myForm.get('companyDetails.companyName')?.invalid && myForm.get('companyDetails.companyName')?.touched" class="error">
-        Company name is required.
-      </div>
+<!-- Company Details Form Group -->
+<div formGroupName="companyDetails">
+  <p>Company Details</p>
+  <div class="control">
+    <label for="companyName">Company Name</label>
+    <select id="companyName" formControlName="companyName" required>
+      <option *ngFor="let company of companies" [value]="company">{{ company }}</option>
+    </select>
+    <div *ngIf="myForm.get('companyDetails.companyName')?.invalid && myForm.get('companyDetails.companyName')?.touched" class="error">
+      Company name is required.
     </div>
   </div>
+</div>
 
-  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+<button type="button" (click)="onSubmit()" class="btn btn-secondary">Submit Form</button>
 </form>

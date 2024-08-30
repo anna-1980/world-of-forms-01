@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-nested-form',
@@ -39,10 +39,8 @@ export class NestedFormComponent implements OnInit {
   ngOnInit() {
     this.loadCount();  // Load the count from localStorage
 
-    this.initializePersonalDetailsValidity();
-    this.initializeCollaboratorsValidity();
-    this.initializeCompanyDetailsValidity();
-    console.log('[OnInit] ------------------------------------');
+    this.initializeFormObservables();
+    console.log('[NestedForm] ---OnInit---------------------------------');
   }
 
   private loadCount() {
@@ -62,47 +60,35 @@ export class NestedFormComponent implements OnInit {
     console.log(`[Debug] Count updated: ${this.count}`);
   }
 
-  
-  private initializePersonalDetailsValidity() {
-    const personalDetails = this.myForm.get('personalDetails');
-    if (personalDetails) {
-      personalDetails.valueChanges.pipe(
-        debounceTime(300) // Debounce for better performance
-      ).subscribe(() => {
-        // this.updateCount();
-        this.count++;
-        this.updatePersonalDetailsValidity();
-      });
-    }
-  }
+  private initializeFormObservables() {
+    // Observables for form groups and arrays
+    const personalDetailsChanges$ = this.myForm.get('personalDetails')!.valueChanges.pipe(debounceTime(300));
+    const companyDetailsChanges$ = this.myForm.get('companyDetails')!.valueChanges.pipe(debounceTime(300));
+    const collaboratorsArray$ = (this.myForm.get('collaborators') as FormArray).valueChanges.pipe(debounceTime(300));
 
-  private initializeCollaboratorsValidity() {
-    const collaboratorsArray = this.myForm.get('collaborators') as FormArray;
-    collaboratorsArray.controls.forEach((control, index) => {
+    // Combine all observables
+    combineLatest([personalDetailsChanges$, companyDetailsChanges$, collaboratorsArray$]).subscribe(() => {
+      this.updateCount();  // Update count and save to localStorage
+      this.updateFormValidity();
+      console.log(`updateFormValidity() combineLatest -0-0-0-0-`);
+    });
+
+    // Subscribe to individual collaborator additions/removals
+    (this.myForm.get('collaborators') as FormArray).controls.forEach((control, index) => {
       control.valueChanges.pipe(
-        debounceTime(300) // Debounce for better performance
+        debounceTime(300)
       ).subscribe(() => {
         this.updateCollaboratorValidity(index);
       });
     });
-
-    // Listen for changes in the collaborators array itself to handle dynamic additions/removals
-    collaboratorsArray.valueChanges.pipe(
-      debounceTime(300)
-    ).subscribe(() => {
-      this.updateAllCollaboratorsValidity();
-    });
   }
 
-  private initializeCompanyDetailsValidity() {
-    const companyDetails = this.myForm.get('companyDetails');
-    if (companyDetails) {
-      companyDetails.valueChanges.pipe(
-        debounceTime(300) // Debounce for better performance
-      ).subscribe(() => {
-        this.updateCompanyDetailsValidity();
-      });
-    }
+  private updateFormValidity() {
+    console.log(`updateFormValidity()  -v-v-v-v-v-`);
+    this.updatePersonalDetailsValidity();
+    this.updateAllCollaboratorsValidity();
+    this.updateCompanyDetailsValidity();
+    console.log(`[NestedForm] updateFormValidity DID RUN xxxxx---> cached: ${this.personalDetailsInvalidCached}, Count: ${this.count}`);
   }
 
   private updatePersonalDetailsValidity() {
@@ -120,7 +106,7 @@ export class NestedFormComponent implements OnInit {
   }
 
   private updateAllCollaboratorsValidity() {
-    this.collaboratorInvalidCached = this.collaborators.controls.map((control, index) => 
+    this.collaboratorInvalidCached = this.collaborators.controls.map((control, index) =>
       control.invalid && (control.touched || control.dirty)
     );
   }
@@ -188,10 +174,23 @@ export class NestedFormComponent implements OnInit {
 
   onSubmit() {
     console.log('[NestedForm], Form submitted');
-    console.log('[NestedForm], Form value:', this.myForm.value);
+    console.log('[NestedForm], Form value:', this.myForm);
   }
 }
 
 
 
-//////////////
+// <!-- Company Details Form Group -->
+// <div formGroupName="companyDetails">
+//   <p>Company Details</p>
+//   <div class="control">
+//     <label for="companyName">Company Name</label>
+//     <select id="companyName" formControlName="companyName" required>
+//       <option value="" disabled>Select a company</option>
+//       <option *ngFor="let company of companies" [value]="company">{{ company }}</option>
+//     </select>
+//     <div *ngIf="myForm.get('companyDetails.companyName')?.invalid && myForm.get('companyDetails.companyName')?.touched" class="error">
+//       Please select a company.
+//     </div>
+//   </div>
+// </div>

@@ -27,6 +27,9 @@ export class RegisterComponent {
     private roleIsInvalidCount = 0;
 
 
+    ngOnInit() {
+      console.log('[RegisterForm] ---OnInit---------------------------------');
+    }
   registrationForm = new FormGroup({
     email: new FormControl('', {
       validators: [Validators.required, Validators.email],
@@ -64,6 +67,7 @@ export class RegisterComponent {
   // a getter for checking formcontrols validity
   get emailIsInvalid() {
     const emailControl = this.registrationForm.get('email');
+    this.emailIsInvalidCount++;
     console.log(`1-emailIsInvalid: ${this.emailIsInvalidCount}`);
     return (
       emailControl?.invalid && (emailControl?.touched || emailControl?.dirty)
