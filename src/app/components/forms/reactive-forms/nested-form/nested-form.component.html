@@ -1,0 +1,91 @@
+<form class="form" [formGroup]="myForm">
+  <!-- Personal Details Form Group -->
+  <div formGroupName="personalDetails">
+    <p>Personal Details</p>
+    
+    <div class="control">
+      <label for="personalFirstName">First Name</label>
+      <input id="personalFirstName" formControlName="firstName" required />
+      <div *ngIf="myForm.get('personalDetails.firstName')?.invalid && myForm.get('personalDetails.firstName')?.touched" class="error">
+        First name is required and must be at least 2 characters.
+      </div>
+    </div>
+
+    <div class="control">
+      <label for="personalLastName">Last Name</label>
+      <input id="personalLastName" formControlName="lastName" required />
+      <div *ngIf="myForm.get('personalDetails.lastName')?.invalid && myForm.get('personalDetails.lastName')?.touched" class="error">
+        Last name is required and must be at least 2 characters.
+      </div>
+    </div>
+
+    <div class="control">
+      <label for="personalEmail">Email</label>
+      <input id="personalEmail" formControlName="email" type="email" required />
+      <div *ngIf="myForm.get('personalDetails.email')?.invalid && myForm.get('personalDetails.email')?.touched" class="error">
+        A valid email is required.
+      </div>
+    </div>
+  </div>
+
+  <!-- Collaborators Form Array -->
+  <div formArrayName="collaborators">
+    <p>Collaborators</p>
+    <button type="button" (click)="addCollaborator()">Add Collaborator</button>
+
+    <div *ngFor="let collaborator of collaborators.controls; let i = index" [formGroupName]="i" class="collaborator">
+      <p>Collaborator {{ i + 1 }}</p>
+
+      <div class="control">
+        <label [for]="'collaboratorFirstName' + i">First Name</label>
+        <input [id]="'collaboratorFirstName' + i" formControlName="firstName" required />
+        <div *ngIf="collaborator.get('firstName')?.invalid && collaborator.get('firstName')?.touched" class="error">
+          First name is required and must be at least 2 characters.
+        </div>
+      </div>
+
+      <div class="control">
+        <label [for]="'collaboratorLastName' + i">Last Name</label>
+        <input [id]="'collaboratorLastName' + i" formControlName="lastName" required />
+        <div *ngIf="collaborator.get('lastName')?.invalid && collaborator.get('lastName')?.touched" class="error">
+          Last name is required and must be at least 2 characters.
+        </div>
+      </div>
+
+      <div class="control">
+        <label [for]="'collaboratorEmail' + i">Email</label>
+        <input [id]="'collaboratorEmail' + i" formControlName="email" type="email" required />
+        <div *ngIf="collaborator.get('email')?.invalid && collaborator.get('email')?.touched" class="error">
+          A valid email is required.
+        </div>
+      </div>
+
+      <div class="control">
+        <label [for]="'collaboratorPhone' + i">Phone</label>
+        <input [id]="'collaboratorPhone' + i" formControlName="phone" required />
+        <div *ngIf="collaborator.get('phone')?.invalid && collaborator.get('phone')?.touched" class="error">
+          A valid phone number is required.
+        </div>
+      </div>
+
+      <button type="button" (click)="removeCollaborator(i)">Remove Collaborator</button>
+    </div>
+  </div>
+
+  <!-- Company Details Form Group -->
+  <div formGroupName="companyDetails">
+    <p>Company Details</p>
+    <div class="control">
+      <label for="companyName">Company Name</label>
+      <select id="companyName" formControlName="companyName" required>
+        <option value="" disabled>Select a company</option>
+        <option *ngFor="let company of companies" [value]="company">{{ company }}</option>
+      </select>
+      <div *ngIf="myForm.get('companyDetails.companyName')?.invalid && myForm.get('companyDetails.companyName')?.touched" class="error">
+        Please select a company.
+      </div>
+    </div>
+  </div>
+
+  <button type="button" (click)="onSubmit()" class="btn btn-secondary">Submit Form</button>
+</form>

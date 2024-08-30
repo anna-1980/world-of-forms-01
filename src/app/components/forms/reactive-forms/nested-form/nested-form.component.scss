@@ -1,0 +1,50 @@
+.form{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(218, 240, 253);
+  p:first-child{
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+  &-content{
+    
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(246, 255, 184);
+    .control{
+   
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+// add class to show red border on input if invalid, use angular buildin aproach
+.invalid{
+  border: 1px solid rgb(221, 255, 0);
+  border-left: 5px solid rgb(255, 162, 0);
+}
+
+.error{
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+[formgroupname].ng-invalid.ng-touched.ng-dirty input, input.ng-invalid.ng-touched.ng-dirty{
+  border: 2px solid rgb(255, 11, 157);
+  border-left: 5px solid rgb(194, 57, 57);
+  background-color: rgb(255, 187, 187);
+} 
+
+[formgroupname].ng-invalid.ng-touched.ng-dirty label,
+.control:has(.ng-invalid.ng-touched.ng-dirty) label {
+  color: #006aff;
+}

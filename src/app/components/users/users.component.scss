@@ -1,0 +1,16 @@
+@import '../../../styles/styles.scss';
+
+.content{
+ 
+  width: 100%;
+  background-color: white;
+   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+app-login {
+  width: 80%; /* Ensure the app-login component takes up the full width */
+}

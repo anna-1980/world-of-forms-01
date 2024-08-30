@@ -1,0 +1,32 @@
+
+
+.btn{
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: $shadow-tabs;
+  transition: all 0.3s;
+  &:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 2px 8px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &:disabled{
+    filter: grayscale(1);
+  }
+
+  &-primary{
+    background-color: $btn-primary;
+    color: map-get(map-get($colors, blue), dark);
+  }
+  &-secondary{
+    background-color: $btn-secondary;
+    color: map-get(map-get($colors, green), dark);
+  }
+  &-accent{
+    background-color: $btn-accent;
+    color: map-get(map-get($colors, red), dark);
+  }
+}

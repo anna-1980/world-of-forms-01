@@ -1,13 +1,16 @@
-@import '../styles.scss'; 
+@import '../styles/styles.scss'; 
 
 .content{
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: map-get(map-get($colors, grey), light);
+ 
+  
+ padding: 1rem 3rem;
+ 
+  margin: 0 auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  background-color: map-get(map-get($colors, grey), default);
   color: map-get(map-get($colors, grey), dark);
   font-size: 2em;
   font-weight: bold;
