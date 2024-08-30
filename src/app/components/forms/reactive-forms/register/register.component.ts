@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { last } from 'rxjs';
+import { passwordsMatchValidator } from './register-validators';
 
 @Component({
   selector: 'app-register',
@@ -25,7 +26,9 @@ export class RegisterComponent {
         validators: [Validators.required, Validators.minLength(3)],
         updateOn: 'blur',
       }),
-    }),
+    }, {
+  validators: [passwordsMatchValidator]}
+  ),
     firstName: new FormControl('', {validators: [Validators.required]}),
     lastName: new FormControl('', {validators: [Validators.required]}),
     street: new FormControl('', {validators: [Validators.required]}),

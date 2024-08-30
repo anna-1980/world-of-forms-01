@@ -1,6 +1,6 @@
-<p>register works!</p>
+
 <form [formGroup]="registrationForm"  class="form">
-  <p>Login</p>
+  <p>Register</p>
 
   <div class="form-content">
     
@@ -14,6 +14,9 @@
 
       <div class="control-group" [formGroup]="registrationForm.controls.passwords">
         <div class="control">
+          @if(registrationForm.controls.passwords.errors?.['passwordsMatchFailed']) {
+            <div class="error">Passwords do not match</div>
+          }
           <label for="password">Password</label>
           <input formControlName="password" type="password" id="password" name="password" required [ngClass]="{'invalid': passwordIsInvalid }" >
           @if (passwordIsInvalid) {
