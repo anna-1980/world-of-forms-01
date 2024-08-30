@@ -51,6 +51,13 @@ export class NestedFormComponent {
       this.collaborators.removeAt(index);
     }
   
+     // Getter method to check if the form is valid
+     get isPersonalDetailsValid() {
+      const personalDetails = this.myForm.get('personalDetails');
+      console.log('[NestedForm] 4-roleIsInvalid');
+      return personalDetails?.invalid && (personalDetails?.touched || personalDetails?.dirty);
+    }
+
   onSubmit() {
     console.log('[NestedForm],Form submitted');
     console.log('[NestedForm],Form  ', this.myForm);

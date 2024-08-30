@@ -87,5 +87,17 @@
     </div>
   </div>
 
+    <!-- Use the getter method to display a message based on personalDetails validity -->
+    @if (!isPersonalDetailsValid)  {
+      <div style="background-color: green; color: white;" class="error">
+        Personal details are valid.
+      </div>
+    }
+    @if(isPersonalDetailsValid) {
+      <div class="error">
+        Personal details are invalid.
+      </div>
+    }
+
   <button type="button" (click)="onSubmit()" class="btn btn-secondary">Submit Form</button>
 </form>
