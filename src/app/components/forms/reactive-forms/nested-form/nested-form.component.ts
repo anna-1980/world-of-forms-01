@@ -12,6 +12,9 @@ import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } fr
 })
 export class NestedFormComponent {
 
+  // Cached validity states
+  personalDetailsInvalidCached: boolean | undefined = false;
+  collaboratorInvalidCached: boolean[] = [];
 
   myForm: FormGroup;
   companies = ['Company A', 'Company B', 'Company C'];
@@ -28,6 +31,42 @@ export class NestedFormComponent {
         companyName: ['', Validators.required],
       }),
     });
+  }
+
+  ngOnInit() {
+    this.initializePersonalDetailsValidity();
+    this.initializeCollaboratorsValidity();
+  }
+
+  private initializePersonalDetailsValidity() {
+    const personalDetails = this.myForm.get('personalDetails');
+    console.log('[NestedForm] personalDetails');
+    personalDetails?.valueChanges.subscribe(() => {
+      this.updatePersonalDetailsValidity();
+    });
+  }
+
+  private initializeCollaboratorsValidity() {
+    const collaboratorsArray = this.myForm.get('collaborators') as FormArray;
+    collaboratorsArray.controls.forEach((control, index) => {
+      control.valueChanges.subscribe(() => {
+        this.updateCollaboratorValidity(index);
+      });
+    });
+  }
+
+  private updatePersonalDetailsValidity() {
+    const personalDetails = this.myForm.get('personalDetails');
+    this.personalDetailsInvalidCached =
+      personalDetails?.invalid && (personalDetails?.touched || personalDetails?.dirty);
+    console.log(`PersonalDetailsInvalid: ${this.personalDetailsInvalidCached}`);
+  }
+
+  private updateCollaboratorValidity(index: number) {
+    const collaborator = this.collaborators.at(index);
+    this.collaboratorInvalidCached[index] =
+      collaborator.invalid && (collaborator.touched || collaborator.dirty);
+    console.log(`Collaborator ${index} Invalid: ${this.collaboratorInvalidCached[index]}`);
   }
 
     // Getter to access collaborators FormArray
@@ -51,12 +90,18 @@ export class NestedFormComponent {
       this.collaborators.removeAt(index);
     }
   
-     // Getter method to check if the form is valid
-     get isPersonalDetailsValid() {
-      const personalDetails = this.myForm.get('personalDetails');
-      console.log('[NestedForm] 4-roleIsInvalid');
-      return personalDetails?.invalid && (personalDetails?.touched || personalDetails?.dirty);
-    }
+     // Getter methods to access the cached values
+  get isPersonalDetailsValid() {
+    console.log('[NestedForm] personalDetails---> cached');
+    return !this.personalDetailsInvalidCached;
+  }
+
+    //  // Getter method to check if the form is valid
+    //  get isPersonalDetailsValid() {
+    //   const personalDetails = this.myForm.get('personalDetails');
+    //   console.log('[NestedForm] personalDetails');
+    //   return personalDetails?.invalid && (personalDetails?.touched || personalDetails?.dirty);
+    // }
 
   onSubmit() {
     console.log('[NestedForm],Form submitted');
