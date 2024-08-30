@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -16,6 +16,7 @@ import { NestedFormComponent } from '../nested-form/nested-form.component';
   imports: [CommonModule, ReactiveFormsModule, NestedFormComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegisterComponent {
 
