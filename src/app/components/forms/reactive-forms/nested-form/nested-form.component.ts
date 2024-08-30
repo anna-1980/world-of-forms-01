@@ -40,7 +40,7 @@ export class NestedFormComponent implements OnInit {
     this.loadCount();  // Load the count from localStorage
 
     this.initializeFormObservables();
-    console.log('[NestedForm] ---OnInit---------------------------------');
+    console.log('[OnInit] ------------------------------------');
   }
 
   private loadCount() {
@@ -68,9 +68,9 @@ export class NestedFormComponent implements OnInit {
 
     // Combine all observables
     combineLatest([personalDetailsChanges$, companyDetailsChanges$, collaboratorsArray$]).subscribe(() => {
+      console.log('combine all observables', '-0-0-0-0-0-0-0-0-0')
       this.updateCount();  // Update count and save to localStorage
       this.updateFormValidity();
-      console.log(`updateFormValidity() combineLatest -0-0-0-0-`);
     });
 
     // Subscribe to individual collaborator additions/removals
@@ -84,11 +84,9 @@ export class NestedFormComponent implements OnInit {
   }
 
   private updateFormValidity() {
-    console.log(`updateFormValidity()  -v-v-v-v-v-`);
     this.updatePersonalDetailsValidity();
     this.updateAllCollaboratorsValidity();
     this.updateCompanyDetailsValidity();
-    console.log(`[NestedForm] updateFormValidity DID RUN xxxxx---> cached: ${this.personalDetailsInvalidCached}, Count: ${this.count}`);
   }
 
   private updatePersonalDetailsValidity() {
@@ -174,23 +172,6 @@ export class NestedFormComponent implements OnInit {
 
   onSubmit() {
     console.log('[NestedForm], Form submitted');
-    console.log('[NestedForm], Form value:', this.myForm);
+    console.log('[NestedForm], Form value:', this.myForm.value);
   }
 }
-
-
-
-// <!-- Company Details Form Group -->
-// <div formGroupName="companyDetails">
-//   <p>Company Details</p>
-//   <div class="control">
-//     <label for="companyName">Company Name</label>
-//     <select id="companyName" formControlName="companyName" required>
-//       <option value="" disabled>Select a company</option>
-//       <option *ngFor="let company of companies" [value]="company">{{ company }}</option>
-//     </select>
-//     <div *ngIf="myForm.get('companyDetails.companyName')?.invalid && myForm.get('companyDetails.companyName')?.touched" class="error">
-//       Please select a company.
-//     </div>
-//   </div>
-// </div>
