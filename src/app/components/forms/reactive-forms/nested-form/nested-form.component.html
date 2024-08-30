@@ -39,7 +39,7 @@
       <div class="control">
         <label [for]="'collaboratorFirstName' + i">First Name</label>
         <input [id]="'collaboratorFirstName' + i" formControlName="firstName" required />
-        <div *ngIf="collaborator.get('firstName')?.invalid && collaborator.get('firstName')?.touched" class="error">
+        <div *ngIf="getCollaboratorControl(i, 'firstName')?.invalid && getCollaboratorControl(i, 'firstName')?.touched" class="error">
           First name is required and must be at least 2 characters.
         </div>
       </div>
@@ -47,7 +47,7 @@
       <div class="control">
         <label [for]="'collaboratorLastName' + i">Last Name</label>
         <input [id]="'collaboratorLastName' + i" formControlName="lastName" required />
-        <div *ngIf="collaborator.get('lastName')?.invalid && collaborator.get('lastName')?.touched" class="error">
+        <div *ngIf="getCollaboratorControl(i, 'lastName')?.invalid && getCollaboratorControl(i, 'lastName')?.touched" class="error">
           Last name is required and must be at least 2 characters.
         </div>
       </div>
@@ -55,7 +55,7 @@
       <div class="control">
         <label [for]="'collaboratorEmail' + i">Email</label>
         <input [id]="'collaboratorEmail' + i" formControlName="email" type="email" required />
-        <div *ngIf="collaborator.get('email')?.invalid && collaborator.get('email')?.touched" class="error">
+        <div *ngIf="getCollaboratorControl(i, 'email')?.invalid && getCollaboratorControl(i, 'email')?.touched" class="error">
           A valid email is required.
         </div>
       </div>
@@ -63,7 +63,7 @@
       <div class="control">
         <label [for]="'collaboratorPhone' + i">Phone</label>
         <input [id]="'collaboratorPhone' + i" formControlName="phone" required />
-        <div *ngIf="collaborator.get('phone')?.invalid && collaborator.get('phone')?.touched" class="error">
+        <div *ngIf="getCollaboratorControl(i, 'phone')?.invalid && getCollaboratorControl(i, 'phone')?.touched" class="error">
           A valid phone number is required.
         </div>
       </div>

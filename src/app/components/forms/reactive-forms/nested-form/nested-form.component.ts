@@ -14,7 +14,7 @@ import { debounceTime } from 'rxjs/operators';
 export class NestedFormComponent implements OnInit {
 
   // Cached validity states
-  personalDetailsInvalidCached: boolean | undefined= false;
+  personalDetailsInvalidCached: boolean | undefined = false;
   collaboratorInvalidCached: boolean[] = [];
   companyDetailsInvalidCached: boolean | undefined = false;
   count: number = 0;
@@ -37,18 +37,40 @@ export class NestedFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadCount();  // Load the count from localStorage
+
     this.initializePersonalDetailsValidity();
     this.initializeCollaboratorsValidity();
     this.initializeCompanyDetailsValidity();
+    console.log('[OnInit] ------------------------------------');
   }
 
+  private loadCount() {
+    const storedCount = localStorage.getItem('debugCount');
+    if (storedCount) {
+      this.count = parseInt(storedCount, 10);
+    }
+  }
+
+  private saveCount() {
+    localStorage.setItem('debugCount', this.count.toString());
+  }
+
+  private updateCount() {
+    this.count++;
+    this.saveCount();  // Save the updated count to localStorage
+    console.log(`[Debug] Count updated: ${this.count}`);
+  }
+
+  
   private initializePersonalDetailsValidity() {
-    this.count = this.count + 1;
     const personalDetails = this.myForm.get('personalDetails');
     if (personalDetails) {
       personalDetails.valueChanges.pipe(
         debounceTime(300) // Debounce for better performance
       ).subscribe(() => {
+        // this.updateCount();
+        this.count++;
         this.updatePersonalDetailsValidity();
       });
     }
@@ -87,7 +109,7 @@ export class NestedFormComponent implements OnInit {
     const personalDetails = this.myForm.get('personalDetails');
     this.personalDetailsInvalidCached =
       personalDetails?.invalid && (personalDetails?.touched || personalDetails?.dirty);
-    console.log(`[NestedForm] PersonalDetailsInvalid ---> cached: ${this.personalDetailsInvalidCached}, ${this.count}`);
+    console.log(`[NestedForm] PersonalDetailsInvalid ---> cached: ${this.personalDetailsInvalidCached}, Count: ${this.count}`);
   }
 
   private updateCollaboratorValidity(index: number) {
@@ -146,18 +168,30 @@ export class NestedFormComponent implements OnInit {
   }
 
   // Getter methods to access the cached values
-  get isPersonalDetailsValid() {
-    console.log('[NestedForm] personalDetails---> cached');
+  get isPersonalDetailsValid(): boolean {
+    console.log('[NestedForm] PersonalDetails Validity Check');
     return !this.personalDetailsInvalidCached;
   }
 
-  get isCompanyDetailsValid() {
-    console.log('[NestedForm] companyDetails---> cached');
+  get isCompanyDetailsValid(): boolean {
+    console.log('[NestedForm] CompanyDetails Validity Check');
     return !this.companyDetailsInvalidCached;
   }
 
+  getCollaboratorInvalid(index: number): boolean {
+    return this.collaboratorInvalidCached[index] ?? false;
+  }
+
+  getCollaboratorControl(index: number, controlName: string) {
+    return this.collaborators.at(index).get(controlName);
+  }
+
   onSubmit() {
-    console.log('[NestedForm],Form submitted');
-    console.log('[NestedForm],Form  ', this.myForm.value);
+    console.log('[NestedForm], Form submitted');
+    console.log('[NestedForm], Form value:', this.myForm.value);
   }
 }
+
+
+
+//////////////
