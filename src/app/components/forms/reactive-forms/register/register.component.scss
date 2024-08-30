@@ -39,3 +39,8 @@
   border-left: 5px solid rgb(194, 57, 57);
   background-color: rgb(255, 187, 187);
 } 
+
+[formgroupname].ng-invalid.ng-touched.ng-dirty label,
+.control:has(.ng-invalid.ng-touched.ng-dirty) label {
+  color: #006aff;
+}
