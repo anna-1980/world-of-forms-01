@@ -12,7 +12,7 @@
       }
       </div>
 
-      <div class="control-group" [formGroup]="registrationForm.controls.passwords">
+      <div class="control-group" formGroupName="passwords">
         <div class="control">
           @if(registrationForm.controls.passwords.errors?.['passwordsMatchFailed']) {
             <div class="error">Passwords do not match</div>
@@ -26,7 +26,7 @@
     
           <div class="control ">
             <label for="confirmPassword">Confirm Password</label>
-            <input formControlName="confirmPassword" id="confirmPassword" name="confirmPassword" required [ngClass]="{'invalid': confirmPasswordIsInvalid }" >
+            <input formControlName="confirmPassword" id="confirmPassword" name="confirmPassword" type="password" required [ngClass]="{'invalid': confirmPasswordIsInvalid }" >
             @if (confirmPasswordIsInvalid) {
               <div class="error">please enter a valid password</div>
             }
@@ -67,8 +67,10 @@
             <p for="agree">I agree to the terms and conditions</p>
             <input style="margin-left: 10px" type="checkbox" formControlName="agree">
           </div>
-          
+<!--           
        <button type="button" (click)="onSubmit()" class="btn btn-accent" [disabled]="!registrationForm.valid">Login</button>
+        -->
+       <button type="button" (click)="onSubmit()" class="btn btn-accent"  >Login</button>
        
         </div>
 </form>

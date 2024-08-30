@@ -24,8 +24,8 @@
 
 // add class to show red border on input if invalid, use angular buildin aproach
 .invalid{
-  border: 1px solid red;
-  border-left: 5px solid rgb(194, 57, 57);
+  border: 1px solid rgb(221, 255, 0);
+  border-left: 5px solid rgb(255, 162, 0);
 }
 
 .error{
@@ -34,7 +34,8 @@
   margin-top: 0.2rem;
 }
 
-[formgroupname].ng-invalid.ng-touched.ng-dirty input, input.ng-invalid.ng-touched.ng-dirty{
-  border: 2px solid rgb(255, 11, 157);
-  border-left: 5px solid rgb(194, 57, 57);
-} 
+// [formgroupname].ng-invalid.ng-touched.ng-dirty input, input.ng-invalid.ng-touched.ng-dirty{
+//   border: 2px solid rgb(255, 11, 157);
+//   border-left: 5px solid rgb(194, 57, 57);
+//   background-color: rgb(255, 187, 187);
+// } 

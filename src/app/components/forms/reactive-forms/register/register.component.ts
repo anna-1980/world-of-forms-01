@@ -19,11 +19,11 @@ export class RegisterComponent {
     }),
     passwords: new FormGroup({
       password: new FormControl('', {
-        validators: [Validators.required, Validators.minLength(3)],
+        validators: [Validators.required, Validators.minLength(4)],
         updateOn: 'blur',
       }),
       confirmPassword: new FormControl('', {
-        validators: [Validators.required, Validators.minLength(3)],
+        validators: [Validators.required, Validators.minLength(4)],
         updateOn: 'blur',
       }),
     }, {
@@ -47,13 +47,14 @@ export class RegisterComponent {
     }
   
     get passwordIsInvalid() {
-      const passwordControl = this.registrationForm.get('password');
+      const passwordControl = this.registrationForm.get('passwords.password');
       return passwordControl?.invalid && (passwordControl?.touched || passwordControl?.dirty);
     }
 
   get confirmPasswordIsInvalid() {
-    const confirmPasswordControl = this.registrationForm.get('confirmPassword');
-    return confirmPasswordControl?.invalid && (confirmPasswordControl?.touched || confirmPasswordControl?.dirty);
+    const confirmPasswordControl = this.registrationForm.get('passwords.confirmPassword');
+    console.log(confirmPasswordControl?.invalid && (confirmPasswordControl?.touched || confirmPasswordControl?.dirty))
+    return confirmPasswordControl?.errors && (confirmPasswordControl?.touched || confirmPasswordControl?.dirty);
   }
 
   get roleIsInvalid() {
@@ -63,7 +64,7 @@ export class RegisterComponent {
 
   onSubmit() {
     console.log('Form submitted');
-    console.log(this.registrationForm.value);
+    console.log(this.registrationForm);
     console.log(this.registrationForm.valid);
   }
 }
