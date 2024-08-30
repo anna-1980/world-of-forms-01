@@ -34,8 +34,8 @@
   margin-top: 0.2rem;
 }
 
-// [formgroupname].ng-invalid.ng-touched.ng-dirty input, input.ng-invalid.ng-touched.ng-dirty{
-//   border: 2px solid rgb(255, 11, 157);
-//   border-left: 5px solid rgb(194, 57, 57);
-//   background-color: rgb(255, 187, 187);
-// } 
+[formgroupname].ng-invalid.ng-touched.ng-dirty input, input.ng-invalid.ng-touched.ng-dirty{
+  border: 2px solid rgb(255, 11, 157);
+  border-left: 5px solid rgb(194, 57, 57);
+  background-color: rgb(255, 187, 187);
+} 
