@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { debounceTime, combineLatest } from 'rxjs';
+import { debounceTime, distinctUntilChanged, combineLatest, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nested-form',
@@ -22,7 +22,7 @@ export class NestedFormComponent implements OnInit {
   myForm: FormGroup;
   companies = ['Company A', 'Company B', 'Company C'];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef) {
     this.myForm = this.fb.group({
       personalDetails: this.fb.group({
         firstName: ['', [Validators.required, Validators.minLength(2)]],
@@ -38,7 +38,6 @@ export class NestedFormComponent implements OnInit {
 
   ngOnInit() {
     this.loadCount();  // Load the count from localStorage
-
     this.initializeFormObservables();
     console.log('[OnInit] ------------------------------------');
   }
@@ -61,22 +60,32 @@ export class NestedFormComponent implements OnInit {
   }
 
   private initializeFormObservables() {
-    // Observables for form groups and arrays
-    const personalDetailsChanges$ = this.myForm.get('personalDetails')!.valueChanges.pipe(debounceTime(300));
-    const companyDetailsChanges$ = this.myForm.get('companyDetails')!.valueChanges.pipe(debounceTime(300));
-    const collaboratorsArray$ = (this.myForm.get('collaborators') as FormArray).valueChanges.pipe(debounceTime(300));
+    const personalDetailsChanges$ = this.myForm.get('personalDetails')!.valueChanges.pipe(
+      debounceTime(300),
+      distinctUntilChanged()  // Only emit when value changes
+    );
+    const companyDetailsChanges$ = this.myForm.get('companyDetails')!.valueChanges.pipe(
+      debounceTime(300),
+      distinctUntilChanged()  // Only emit when value changes
+    );
+    const collaboratorsArray$ = (this.myForm.get('collaborators') as FormArray).valueChanges.pipe(
+      debounceTime(300),
+      distinctUntilChanged()  // Only emit when value changes
+    );
 
     // Combine all observables
     combineLatest([personalDetailsChanges$, companyDetailsChanges$, collaboratorsArray$]).subscribe(() => {
       console.log('combine all observables', '-0-0-0-0-0-0-0-0-0')
       this.updateCount();  // Update count and save to localStorage
       this.updateFormValidity();
+      this.cdr.detectChanges();  // Manually trigger change detection if needed
     });
 
     // Subscribe to individual collaborator additions/removals
     (this.myForm.get('collaborators') as FormArray).controls.forEach((control, index) => {
       control.valueChanges.pipe(
-        debounceTime(300)
+        debounceTime(300),
+        distinctUntilChanged()  // Only emit when value changes
       ).subscribe(() => {
         this.updateCollaboratorValidity(index);
       });
@@ -138,7 +147,8 @@ export class NestedFormComponent implements OnInit {
 
     // Subscribe to the new collaborator's value changes
     collaboratorGroup.valueChanges.pipe(
-      debounceTime(300)
+      debounceTime(300),
+      distinctUntilChanged()  // Only emit when value changes
     ).subscribe(() => {
       const index = this.collaborators.controls.indexOf(collaboratorGroup);
       this.updateCollaboratorValidity(index);
