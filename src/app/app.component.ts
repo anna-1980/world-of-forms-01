@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/navigation/navigation/navigation.component';
@@ -9,7 +9,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, LandingPageComponent, NavigationComponent]
+    imports: [CommonModule, RouterOutlet, LandingPageComponent, NavigationComponent],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   title = 'world-of-forms-01';

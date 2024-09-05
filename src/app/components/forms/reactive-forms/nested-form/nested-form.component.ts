@@ -39,6 +39,7 @@ export class NestedFormComponent implements OnInit {
   ngOnInit() {
     this.loadCount();  // Load the count from localStorage
     this.initializeFormObservables();
+    // this.cdr.detach();  // Detach change detection
     console.log('[OnInit] ------------------------------------');
   }
 
@@ -78,7 +79,8 @@ export class NestedFormComponent implements OnInit {
       console.log('combine all observables', '-0-0-0-0-0-0-0-0-0')
       this.updateCount();  // Update count and save to localStorage
       this.updateFormValidity();
-      this.cdr.detectChanges();  // Manually trigger change detection if needed
+      // this.cdr.detectChanges();  // Manually trigger change detection if needed
+      this.cdr.markForCheck();  // Mark for check if needed
     });
 
     // Subscribe to individual collaborator additions/removals
