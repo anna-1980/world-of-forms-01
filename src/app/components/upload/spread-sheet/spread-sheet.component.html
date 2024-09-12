@@ -1,11 +1,11 @@
 <div>
   <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls, .csv" />
   <button (click)="saveToDatabase()">Save to Database</button>
-  <button (click)="loadFile(1)">Load from Database</button>
   <button (click)="saveAsExcel()">Download as Excel</button>
+ 
 
   <!-- List of available files -->
-  <div>
+  <div *ngIf="availableFiles.length > 0">
     <h3>Available Files</h3>
     <ul>
       <li *ngFor="let file of availableFiles">

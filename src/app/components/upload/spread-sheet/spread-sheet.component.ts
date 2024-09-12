@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SpreadSheetService } from '../spread-sheet.service'; // Import the service
 import * as XLSX from 'xlsx';
@@ -34,13 +34,15 @@ export class SpreadSheetComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private spreadSheetService: SpreadSheetService
+    private spreadSheetService: SpreadSheetService,
+    private cdr: ChangeDetectorRef 
   ) {}
 
   ngOnInit() {
     this.loadAvailableFiles(); // Load available files when the component is initialized
     this.addRow();
     this.addRow();
+    console.log('available files',this.availableFiles);
   }
 
   get rows(): FormArray {
@@ -62,13 +64,22 @@ export class SpreadSheetComponent implements OnInit {
 
   // Load the available files
   loadAvailableFiles(): void {
-    this.spreadSheetService.loadAvailableFiles().subscribe((response: AvailableFile[]) => {
-      this.availableFiles = response;
-    });
+    this.spreadSheetService.loadAvailableFiles().subscribe(
+      (response: AvailableFile[]) => {
+        this.availableFiles = response;
+        console.log('Available files:', this.availableFiles); // Log after files are loaded
+        this.cdr.detectChanges(); // Trigger change detection
+      },
+      (error: HttpErrorResponse) => {
+        console.error('Error loading available files:', error);
+        alert('Error loading available files. Please try again.');
+      }
+    );
   }
 
   // Load a specific file's data from the mock database
   loadFile(id: number): void {
+    console.log('File ID to load:', id);  // Debugging line
     this.spreadSheetService.loadFileById(id).subscribe(
       (response: SpreadsheetData) => {
         this.populateFormWithData(response.data);
