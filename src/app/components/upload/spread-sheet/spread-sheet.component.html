@@ -1,0 +1,40 @@
+<div>
+  <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls, .csv" />
+  <button (click)="saveToDatabase()">Save to Database</button>
+  <button (click)="loadFromDatabase()">Load from Database</button>
+  <button (click)="saveAsExcel()">Download as Excel</button>
+
+  <!-- List of available files to load -->
+  <div>
+    <h3>Available Files</h3>
+    <ul>
+      <li *ngFor="let file of availableFiles" (click)="loadFile(file.id)">
+        {{ file.name }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Editable spreadsheet table -->
+  <table *ngIf="data.length" class="spreadsheet">
+    <tr *ngFor="let row of data; let rowIndex = index">
+      <td *ngFor="let cell of row; let colIndex = index">
+        <input [(ngModel)]="data[rowIndex][colIndex]" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<!-- <div>
+  <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls, .csv" />
+</div>
+
+ Display Excel data in a table format (optional)  
+<table *ngIf="data.length">
+  <tr *ngFor="let row of data">
+    <td *ngFor="let cell of row">{{ cell }}</td>
+  </tr>
+</table>
+
+<button (click)="saveToDatabase()">Save Changes</button> -->
+

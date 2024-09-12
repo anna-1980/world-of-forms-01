@@ -1,0 +1,15 @@
+table.spreadsheet {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.spreadsheet td, table.spreadsheet th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table.spreadsheet input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
