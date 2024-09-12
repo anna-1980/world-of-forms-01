@@ -1,69 +1,171 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { SpreadSheetService } from '../spread-sheet.service'; // Import the service
 import * as XLSX from 'xlsx';
-import { SpreadSheetService } from '../spread-sheet.service';
+import { HttpErrorResponse } from '@angular/common/http';
+
+export interface SpreadsheetRow {
+  cells: string[];
+}
+
+export interface AvailableFile {
+  id: number;
+  name: string;
+}
+
+export interface SpreadsheetData {
+  name: string;
+  data: string[][];
+}
 
 @Component({
   selector: 'app-spread-sheet',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './spread-sheet.component.html',
-  styleUrl: './spread-sheet.component.scss',
+  styleUrls: ['./spread-sheet.component.scss'],
 })
-export class SpreadSheetComponent {
-  data: any[][] = []; // To store the data parsed from the Excel file
-  availableFiles: string[] = []; // To store the available files in the mock database
+export class SpreadSheetComponent implements OnInit {
+  spreadsheetForm: FormArray = this.fb.array([]);
+  availableFiles: AvailableFile[] = []; // Use the AvailableFile interface
+  currentFileName: string = ''; // Track the current file name
+  currentFileId: number | null = null; // Track the current file ID
 
-  // Inject the SpreadSheetService
-  constructor(private spreadSheetService: SpreadSheetService) {}
- 
+  constructor(
+    private fb: FormBuilder,
+    private spreadSheetService: SpreadSheetService
+  ) {}
+
   ngOnInit() {
     this.loadAvailableFiles(); // Load available files when the component is initialized
+    this.addRow();
+    this.addRow();
   }
 
-  loadAvailableFiles() {
-    this.spreadSheetService.loadAvailableFiles().subscribe((response: any) => {
+  get rows(): FormArray {
+    return this.spreadsheetForm;
+  }
+
+  addRow(): void {
+    const row = this.fb.group({
+      cells: this.fb.array([this.fb.control('', Validators.required), this.fb.control('', Validators.required)])
+    });
+    this.rows.push(row);
+  }
+
+  addCell(rowIndex: number): void {
+    const row = this.rows.at(rowIndex) as FormGroup;
+    const cells = row.get('cells') as FormArray;
+    cells.push(this.fb.control('', Validators.required));
+  }
+
+  // Load the available files
+  loadAvailableFiles(): void {
+    this.spreadSheetService.loadAvailableFiles().subscribe((response: AvailableFile[]) => {
       this.availableFiles = response;
     });
   }
- 
-  // Function to handle file input change event
-  onFileChange(event: any) {
-    const target: DataTransfer = <DataTransfer>event.target;
 
-    if (target.files.length !== 1) {
+  // Load a specific file's data from the mock database
+  loadFile(id: number): void {
+    this.spreadSheetService.loadFileById(id).subscribe(
+      (response: SpreadsheetData) => {
+        this.populateFormWithData(response.data);
+        this.currentFileName = response.name;
+        this.currentFileId = id;  // Store the numeric ID
+      },
+      (error: HttpErrorResponse) => {
+        console.error('Error loading file:', error);
+        alert('Error loading file. Please try again.');
+      }
+    );
+  }
+
+  // Populate the form with data from the database or uploaded Excel
+  populateFormWithData(data: string[][]): void {
+    this.spreadsheetForm.clear(); // Clear previous form data
+    data.forEach(row => {
+      const rowArray = this.fb.array(row.map(cell => this.fb.control(cell)));
+      this.spreadsheetForm.push(this.fb.group({ cells: rowArray }));
+    });
+  }
+
+  // Convert form data to Excel-compatible format and download
+  saveAsExcel(): void {
+    const formData = this.spreadsheetForm.value.map((group: { cells: string[] }) => group.cells);
+    const ws: XLSX.WorkSheet = XLSX.utils.aoa_to_sheet(formData);
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+    XLSX.writeFile(wb, 'ExportedData.xlsx');
+  }
+
+  // Handle Excel file upload
+  onFileChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (!input.files || input.files.length !== 1) {
       throw new Error('Cannot use multiple files');
     }
 
-    const reader: FileReader = new FileReader();
-    reader.onload = (e: any) => {
-      const bstr: string = e.target.result;
-      const wb: XLSX.WorkBook = XLSX.read(bstr, { type: 'binary' });
-      const wsname: string = wb.SheetNames[0];
-      const ws: XLSX.WorkSheet = wb.Sheets[wsname];
-      this.data = XLSX.utils.sheet_to_json(ws, { header: 1 });
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.onload = (e: ProgressEvent<FileReader>) => {
+      const bstr = e.target?.result as string;
+      const wb = XLSX.read(bstr, { type: 'binary' });
+      const wsname = wb.SheetNames[0];
+      const ws = wb.Sheets[wsname];
+      const data = XLSX.utils.sheet_to_json<string[]>(ws, { header: 1 });
+      this.populateFormWithData(data as string[][]);
     };
-    reader.readAsBinaryString(target.files[0]);
+    reader.readAsBinaryString(file);
   }
 
-   // Function to save the parsed data to the mock database
-   saveToDatabase() {
-    this.spreadSheetService.data = this.data; // Update the service with the current data
-    this.spreadSheetService.updateMockDatabase(); // Call the service to save to the database
+  // Save the current spreadsheet to the database
+  saveToDatabase(): void {
+    const formData = this.spreadsheetForm.value.map((group: { cells: string[] }) => group.cells);
+    const data: SpreadsheetData = {
+      name: this.currentFileName,
+      data: formData
+    };
+
+    console.log('Data to save:', this.currentFileId, data);
+
+    if (this.currentFileId !== null) {
+      this.spreadSheetService.updateFile(this.currentFileId, data).subscribe(response => {
+        console.log('Data saved to mock DB:', response);
+      });
+    } else {
+      this.spreadSheetService.createFile(data).subscribe(response => {
+        console.log('New file created in mock DB:', response);
+        this.currentFileId = response.id; // Update the current file ID with the new file's ID
+      });
+    }
+  }
+  // getCellControls(rowIndex: number): FormControl[] {
+  //   const row = this.spreadsheetForm.at(rowIndex) as FormGroup;
+  //   return (row.get('cells') as FormArray).controls as FormControl[];
+  // }
+
+  // getCellControls(rowIndex: number): FormArray {
+  //   const row = this.spreadsheetForm.at(rowIndex) as FormGroup;
+  //   return row.get('cells') as FormArray;
+  // }
+
+  getCellControls(rowIndex: number): FormArray {
+    const row = this.spreadsheetForm.at(rowIndex) as FormGroup;
+    return row.get('cells') as FormArray;
   }
 
-  // Function to load data from the mock database
-  loadFromDatabase() {
-    this.spreadSheetService.loadFromMockDatabase(); // Call the service to load data
-    this.data = this.spreadSheetService.data; // Assign the loaded data to the component's data
+  getCellControl(rowIndex: number, colIndex: number): FormControl {
+    // Get the row as a FormGroup
+    const row = this.spreadsheetForm.at(rowIndex) as FormGroup;
+    // Get the cells FormArray from the row
+    const cells = row.get('cells') as FormArray;
+    // Return the specific FormControl (cell) at the given column index
+    return cells.at(colIndex) as FormControl;
   }
 
-  saveAsExcel() {
-    const ws: XLSX.WorkSheet = XLSX.utils.aoa_to_sheet(this.data);
-    const wb: XLSX.WorkBook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-
-    // Generate Excel file and trigger download
-    XLSX.writeFile(wb, 'ExportedData.xlsx');
+  getRowFormGroup(rowIndex: number): FormGroup {
+    return this.spreadsheetForm.at(rowIndex) as FormGroup;
   }
 }

@@ -1,31 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; // Import the HttpClient module
+import { Observable } from 'rxjs';
+import { AvailableFile, SpreadsheetData } from './spread-sheet/spread-sheet.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SpreadSheetService {
-  data: any; // Declare the 'data' property
+  private apiUrl = 'http://localhost:3000/spreadsheets'; // Base URL for JSON Server
 
   constructor(private http: HttpClient) { } // Inject the HttpClient module
 
-  loadAvailableFiles() {
-    return this.http.get('http://localhost:3000/spreadsheets');
+   // Load all available files from the mock database
+   loadAvailableFiles(): Observable<AvailableFile[]> {
+    return this.http.get<AvailableFile[]>(this.apiUrl);
   }
 
-  
-  loadFromMockDatabase() {
-    this.http.get('http://localhost:3000/spreadsheets')
-      .subscribe((response: any) => {
-        this.data = response[0].data;  // Assuming you're fetching the first spreadsheet entry
-        console.log('Data loaded from mock DB:', this.data);
-      });
+  // Load a specific file's data from the mock database
+  loadFileById(id: number): Observable<SpreadsheetData> {
+    return this.http.get<SpreadsheetData>(`${this.apiUrl}/${id}`);
   }
 
-  updateMockDatabase() {
-    this.http.put('http://localhost:3000/spreadsheets/1', { data: this.data })
-      .subscribe(response => {
-        console.log('Data updated in mock DB:', response);
-      });
+  // Update a specific file's data in the mock database
+  updateFile(id: number, data: SpreadsheetData): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, data);
+  }
+
+  // Create a new file in the mock database
+  createFile(data: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, data);
   }
 }

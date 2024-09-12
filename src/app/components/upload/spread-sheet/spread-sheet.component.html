@@ -1,27 +1,34 @@
 <div>
   <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls, .csv" />
   <button (click)="saveToDatabase()">Save to Database</button>
-  <button (click)="loadFromDatabase()">Load from Database</button>
+  <button (click)="loadFile(1)">Load from Database</button>
   <button (click)="saveAsExcel()">Download as Excel</button>
 
-  <!-- List of available files to load -->
+  <!-- List of available files -->
   <div>
     <h3>Available Files</h3>
     <ul>
-      <li *ngFor="let file of availableFiles" (click)="loadFile(file.id)">
+      <li *ngFor="let file of availableFiles">
         {{ file.name }}
+        <button (click)="loadFile(file.id)">Load</button>
       </li>
     </ul>
   </div>
 
   <!-- Editable spreadsheet table -->
-  <table *ngIf="data.length" class="spreadsheet">
-    <tr *ngFor="let row of data; let rowIndex = index">
-      <td *ngFor="let cell of row; let colIndex = index">
-        <input [(ngModel)]="data[rowIndex][colIndex]" />
-      </td>
-    </tr>
-  </table>
+
+ <br>
+ <p>{{currentFileName}}</p>
+<table *ngIf="spreadsheetForm.length > 0 && currentFileName" class="spreadsheet">
+  <tr *ngFor="let row of spreadsheetForm.controls; let rowIndex = index" [formGroup]="getRowFormGroup(rowIndex)">
+    <td *ngFor="let cell of getCellControls(rowIndex).controls; let colIndex = index">
+      <input [formControl]="getCellControl(rowIndex, colIndex)" />
+    </td>
+    <td>
+      <button (click)="addCell(rowIndex)">Add Cell</button>
+    </td>
+  </tr>
+</table>
 </div>
 
 

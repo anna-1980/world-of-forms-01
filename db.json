@@ -1,9 +1,93 @@
 {
-  "spreadsheets": [],
-
+  "spreadsheets": [
+    {
+      "name": "202",
+      "data": [
+        [
+          "Product ZZZZ",
+          "Price",
+          "Stock"
+        ],
+        [
+          "AppleZZXX",
+          1,
+          50
+        ],
+        [
+          "BananaXXXX",
+          2,
+          100
+        ]
+      ],
+      "id": "2"
+    },
+    {
+      "id": "1",
+      "name": "303",
+      "data": [
+        [
+          "Product",
+          "Price",
+          "Stock"
+        ],
+        [
+          "Apple",
+          1,
+          50
+        ],
+        [
+          "Banana",
+          2,
+          100
+        ]
+      ]
+    },
+    {
+      "id": "7424",
+      "name": "444",
+      "data": [
+        [
+          "name",
+          "Last name",
+          "Stock"
+        ],
+        [
+          "John",
+          "Doe",
+          50
+        ],
+        [
+          "Banana",
+          2,
+          100
+        ]
+      ]
+    },
+    {
+      "id": "c091",
+      "name": "555",
+      "data": [
+        [
+          "name xx",
+          "Last name",
+          "Stock"
+        ],
+        [
+          "Johnxx",
+          "Doe",
+          50
+        ],
+        [
+          "Bananaxx",
+          2,
+          100
+        ]
+      ]
+    }
+  ],
   "users": [
     {
-      "id": 101,
+      "id": "101",
       "name": "User 1",
       "email": "user1@test.com",
       "phone": "123-456-1101",
@@ -12,7 +96,7 @@
       "password": "123"
     },
     {
-      "id": 102,
+      "id": "102",
       "name": "User 2",
       "email": "user2@test.com",
       "phone": "123-456-1102",
@@ -21,7 +105,7 @@
       "password": "456"
     },
     {
-      "id": 103,
+      "id": "103",
       "name": "User 3",
       "email": "user3@test.com",
       "phone": "123-456-1103",
@@ -30,7 +114,7 @@
       "password": "789"
     },
     {
-      "id": 104,
+      "id": "104",
       "name": "User 4",
       "email": "user4@test.com",
       "phone": "123-456-1104",
@@ -38,7 +122,7 @@
       "role": "Tester"
     },
     {
-      "id": 105,
+      "id": "105",
       "name": "User 5",
       "email": "user5@test.com",
       "phone": "123-456-1105",
@@ -46,7 +130,7 @@
       "role": "Frontend Developer"
     },
     {
-      "id": 106,
+      "id": "106",
       "name": "User 6",
       "email": "user6@test.com",
       "phone": "123-456-1106",
@@ -54,7 +138,7 @@
       "role": "Manager"
     },
     {
-      "id": 107,
+      "id": "107",
       "name": "User 7",
       "email": "user7@test.com",
       "phone": "123-456-1107",
@@ -62,7 +146,7 @@
       "role": "Manager"
     },
     {
-      "id": 108,
+      "id": "108",
       "name": "User 8",
       "email": "user8@test.com",
       "phone": "123-456-1108",
@@ -70,7 +154,7 @@
       "role": "Assistant"
     },
     {
-      "id": 109,
+      "id": "109",
       "name": "User 9",
       "email": "user9@test.com",
       "phone": "123-456-1109",
@@ -78,7 +162,7 @@
       "role": "Frontend Developer"
     },
     {
-      "id": 110,
+      "id": "110",
       "name": "User 10",
       "email": "user10@test.com",
       "phone": "123-456-1110",
@@ -86,36 +170,37 @@
       "role": "Project Manager"
     }
   ],
-
   "departments": [
     {
-      "id": 200,
+      "id": "200",
       "name": "IT",
       "location": "Heidelberg",
       "password": "123"
     },
     {
-      "id": 201,
+      "id": "201",
       "name": "HR",
       "location": "Walldorf",
       "password": "456"
     },
     {
-      "id": 202,
+      "id": "202",
       "name": "Finance",
       "location": "Walldorf",
       "password": "789"
     }
   ],
-
   "meetings": [
     {
-      "id": 301,
+      "id": "301",
       "time-stamp": "2022-03-01T10:00:00Z",
       "signments": [
         {
           "data-stamp": "2022-03-01T11:00:00Z",
-          "signing-person": { "id": 101, "name": "User 1" },
+          "signing-person": {
+            "id": 101,
+            "name": "User 1"
+          },
           "form-data": "Initial project scope defined."
         }
       ],
@@ -123,19 +208,31 @@
       "description": "Initial meeting to discuss project scope and deliverables.",
       "date": "2022-03-01",
       "attendees": [
-        { "id": 101, "name": "User 1" },
-        { "id": 102, "name": "User 2" },
-        { "id": 103, "name": "User 3" }
+        {
+          "id": 101,
+          "name": "User 1"
+        },
+        {
+          "id": 102,
+          "name": "User 2"
+        },
+        {
+          "id": 103,
+          "name": "User 3"
+        }
       ],
       "location": "Heidelberg"
     },
     {
-      "id": 302,
+      "id": "302",
       "time-stamp": "2022-03-02T14:00:00Z",
       "signments": [
         {
           "data-stamp": "2022-03-02T15:00:00Z",
-          "signing-person": { "id": 104, "name": "User 4" },
+          "signing-person": {
+            "id": 104,
+            "name": "User 4"
+          },
           "form-data": "Sprint tasks defined."
         }
       ],
@@ -143,16 +240,25 @@
       "description": "Meeting to plan the tasks for the next sprint.",
       "date": "2022-03-02",
       "attendees": [
-        { "id": 104, "name": "User 4" },
-        { "id": 105, "name": "User 5" },
-        { "id": 106, "name": "User 6" }
+        {
+          "id": 104,
+          "name": "User 4"
+        },
+        {
+          "id": 105,
+          "name": "User 5"
+        },
+        {
+          "id": 106,
+          "name": "User 6"
+        }
       ],
       "location": "Walldorf"
     }
   ],
   "study": [
     {
-      "id": 117,
+      "id": "117",
       "external_id": "2024-04-19-5",
       "acronym": "007- Anna - Testing",
       "title": "Anna - April Testing (ENG)",
@@ -233,7 +339,13 @@
               ]
             },
             "sponsored_portfolio": "infrastructure",
-            "keywords": ["super", "nice", "trial", "synopsis", "testing"],
+            "keywords": [
+              "super",
+              "nice",
+              "trial",
+              "synopsis",
+              "testing"
+            ],
             "other_lega_sponsor": null,
             "pei_involved": false,
             "bfarm_involved": false,
@@ -506,7 +618,6 @@
               ]
             },
             "patient_analyzed": "222",
-
             "follow_up": null,
             "trial_outline": {
               "type": "doc",
@@ -603,7 +714,6 @@
             },
             "acronym": "007- Anna - Testing",
             "Involved": null,
-
             "enrollment": null,
             "international": null,
             "startDate": null,
@@ -616,7 +726,9 @@
             "startDateType": null,
             "enrollmentType": null,
             "type": "Interventional",
-            "interventionType": ["Device"],
+            "interventionType": [
+              "Device"
+            ],
             "dealingWith": null,
             "timePerspective": null,
             "masking": null,
@@ -687,13 +799,14 @@
                 }
               ]
             },
-
             "fundingCurrency": "Euro",
             "timestamp": "2024-05-06T10:21:08.335Z",
             "researchTopic": null,
             "documentation_status": "TSB Prioritization Ready",
             "molecular_markers": null,
-            "indications": ["Breast Cancer"],
+            "indications": [
+              "Breast Cancer"
+            ],
             "funding_type": null,
             "total_cost": null,
             "has_external_partner": false,
@@ -703,7 +816,9 @@
             "max_age": -1,
             "min_age_unit": null,
             "max_age_unit": null,
-            "gender": ["female"],
+            "gender": [
+              "female"
+            ],
             "patient_involvment_freetext": {
               "type": "doc",
               "content": [
@@ -740,14 +855,17 @@
             "funding_start_date_type": null,
             "funding_completion_date_type": null,
             "other": null,
-            "prt": ["Precision Local Therapy"],
-            "pda": ["Brain"],
+            "prt": [
+              "Precision Local Therapy"
+            ],
+            "pda": [
+              "Brain"
+            ],
             "other_prt": null,
             "other_pda": null,
             "planned_patent": "n.a.",
             "study_idea": "Parental institution",
             "planned_patent_freetext": null,
-
             "authority_submission_text": null,
             "ethics_commitee_text": null,
             "pei_text": null,
@@ -997,7 +1115,10 @@
                       "id": 19,
                       "name": "Site Berlin",
                       "inactive": false,
-                      "mail": ["karolina@test.de", "piwonia@test.de"],
+                      "mail": [
+                        "karolina@test.de",
+                        "piwonia@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1039,7 +1160,10 @@
                       "id": 16,
                       "name": "Site Dresden",
                       "inactive": false,
-                      "mail": ["hs@test.de", "ks@test.de"],
+                      "mail": [
+                        "hs@test.de",
+                        "ks@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1169,7 +1293,10 @@
                       "id": 19,
                       "name": "Site Berlin",
                       "inactive": false,
-                      "mail": ["karolina@test.de", "piwonia@test.de"],
+                      "mail": [
+                        "karolina@test.de",
+                        "piwonia@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1211,7 +1338,10 @@
                       "id": 16,
                       "name": "Site Dresden",
                       "inactive": false,
-                      "mail": ["hs@test.de", "ks@test.de"],
+                      "mail": [
+                        "hs@test.de",
+                        "ks@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1354,7 +1484,10 @@
                       "id": 19,
                       "name": "Site Berlin",
                       "inactive": false,
-                      "mail": ["karolina@test.de", "piwonia@test.de"],
+                      "mail": [
+                        "karolina@test.de",
+                        "piwonia@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1396,7 +1529,10 @@
                       "id": 16,
                       "name": "Site Dresden",
                       "inactive": false,
-                      "mail": ["hs@test.de", "ks@test.de"],
+                      "mail": [
+                        "hs@test.de",
+                        "ks@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1539,7 +1675,10 @@
                       "id": 19,
                       "name": "Site Berlin",
                       "inactive": false,
-                      "mail": ["karolina@test.de", "piwonia@test.de"],
+                      "mail": [
+                        "karolina@test.de",
+                        "piwonia@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1581,7 +1720,10 @@
                       "id": 16,
                       "name": "Site Dresden",
                       "inactive": false,
-                      "mail": ["hs@test.de", "ks@test.de"],
+                      "mail": [
+                        "hs@test.de",
+                        "ks@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1711,7 +1853,10 @@
                       "id": 19,
                       "name": "Site Berlin",
                       "inactive": false,
-                      "mail": ["karolina@test.de", "piwonia@test.de"],
+                      "mail": [
+                        "karolina@test.de",
+                        "piwonia@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1753,7 +1898,10 @@
                       "id": 16,
                       "name": "Site Dresden",
                       "inactive": false,
-                      "mail": ["hs@test.de", "ks@test.de"],
+                      "mail": [
+                        "hs@test.de",
+                        "ks@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1901,7 +2049,10 @@
                       "id": 19,
                       "name": "Site Berlin",
                       "inactive": false,
-                      "mail": ["karolina@test.de", "piwonia@test.de"],
+                      "mail": [
+                        "karolina@test.de",
+                        "piwonia@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -1943,7 +2094,10 @@
                       "id": 16,
                       "name": "Site Dresden",
                       "inactive": false,
-                      "mail": ["hs@test.de", "ks@test.de"],
+                      "mail": [
+                        "hs@test.de",
+                        "ks@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -2070,7 +2224,10 @@
                       "id": 19,
                       "name": "Site Berlin",
                       "inactive": false,
-                      "mail": ["karolina@test.de", "piwonia@test.de"],
+                      "mail": [
+                        "karolina@test.de",
+                        "piwonia@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -2112,7 +2269,10 @@
                       "id": 16,
                       "name": "Site Dresden",
                       "inactive": false,
-                      "mail": ["hs@test.de", "ks@test.de"],
+                      "mail": [
+                        "hs@test.de",
+                        "ks@test.de"
+                      ],
                       "type": null
                     },
                     "parent": null,
@@ -2257,14 +2417,22 @@
               ]
             },
             "sponsored_portfolio": "infrastructure",
-            "keywords": ["super", "nice", "trial", "synopsis", "testing"],
+            "keywords": [
+              "super",
+              "nice",
+              "trial",
+              "synopsis",
+              "testing"
+            ],
             "other_lega_sponsor": null,
             "pei_involved": false,
             "bfarm_involved": false,
             "bfsinvolved": false,
             "mdr_class": null,
             "ivdr_class": null,
-            "authority_submission": ["High Authority"],
+            "authority_submission": [
+              "High Authority"
+            ],
             "ethics_committee_involved": true,
             "hypotheses": {
               "type": "doc",
@@ -2646,7 +2814,9 @@
             "enrollmentType": null,
             "epidemiological": null,
             "type": "Interventional",
-            "interventionType": ["Device"],
+            "interventionType": [
+              "Device"
+            ],
             "dealingWith": null,
             "randomized": null,
             "interventionModel": null,
@@ -2717,13 +2887,14 @@
                 }
               ]
             },
-
             "fundingCurrency": "Euro",
             "timestamp": "2024-04-30T07:46:59.553Z",
             "researchTopic": null,
             "documentation_status": "First Review",
             "molecular_markers": null,
-            "indications": ["Breast Cancer"],
+            "indications": [
+              "Breast Cancer"
+            ],
             "funding_type": null,
             "number_of_arms": null,
             "number_of_arms_type": null,
@@ -2735,7 +2906,9 @@
             "max_age": -1,
             "min_age_unit": null,
             "max_age_unit": null,
-            "gender": ["female"],
+            "gender": [
+              "female"
+            ],
             "patient_involvment_freetext": {
               "type": "doc",
               "content": [
@@ -2772,14 +2945,17 @@
             "funding_start_date_type": null,
             "funding_completion_date_type": null,
             "other": null,
-            "prt": ["Precision Local Therapy"],
-            "pda": ["Brain"],
+            "prt": [
+              "Precision Local Therapy"
+            ],
+            "pda": [
+              "Brain"
+            ],
             "other_prt": null,
             "other_pda": null,
             "planned_patent": "n.a.",
             "study_idea": "Parental institution",
             "planned_patent_freetext": null,
-
             "authority_submission_text": null,
             "ethics_commitee_text": null,
             "pei_text": null,
