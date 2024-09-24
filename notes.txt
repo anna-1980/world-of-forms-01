@@ -1,0 +1,18 @@
+Hello :) , 
+
+I am trying to build a basic , hopefully expandable layout of my new app , the purpose of the app it to allow a project registry , do you see any suggestions to my routing aproach such that the code is scalable in the future?
+
+the application functionaliyu: 
+application form including detaild of : name, acronim, short-description, associated institution (choosen from a provided list), cooperation partners, timeframe (datq beginn , projected end date), 
+second form part - application for funds: number of team members required, bumber of hours/week, timeline, ask for budged sum, 
+
+then , after submitting the application for, it get (the form) a new status: submitted and can be view by the Board , the board has it's view of the form details and can approve or dissaprove it's details, for instance , can remore a person from the team or assign an additional person , form the persons available. So the reviously filled form has to be filled into a new form , for the Board to evaluate.
+
+once this process is done, the Board member submits the form, the form moves on into a new status: finance check 
+
+now financing department needs to see the details of the form and have the financing section avaiblable for approval and evaluation , say they can rate from 1-5 feasability of the financing of this project, with this many people on the team , for such a period of time.  Onec they are done evaluating this , they have a comment field available, they can submit, 
+
+sumitted form goes back to the Board and they decide , based on the evaluation of the finance department wheather the project can be approved or not, if yes , project moves on to a new status: approved
+if rejected - the applicant can be permited to edit the form again to make the adjustments
+
+//////////////////////////////

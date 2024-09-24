@@ -1,16 +1,19 @@
 import { Routes } from '@angular/router';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { UsersComponent } from './components/users/users.component';
-import { MeetingsComponent } from './components/meetings/meetings.component';
-import { HomeComponent } from './components/home/home.component';
-import { DataComponent } from './components/data/data.component';
+// import { LandingPageComponent } from './components/landing-page/landing-page.component';
+// import { UsersComponent } from './components/users/users.component';
+// import { MeetingsComponent } from './components/meetings/meetings.component';
+// import { HomeComponent } from './components/home/home.component';
+// import { DataComponent } from './components/data/data.component';
+// import { SandboxComponent } from './components/sandbox/sandbox.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'meetings', component: MeetingsComponent },
-  { path: 'data', component: DataComponent },
-  // Redirect to home if no matching route is found
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent) },
+  { path: 'users', loadComponent: () => import('./components/users/users.component').then(m => m.UsersComponent) 
+   },
+   { path: 'user-details/:id', loadComponent: () => import('./components/users/user-details/user-details.component').then(m => m.UserDetailsComponent) },
+  { path: 'meetings', loadComponent: () => import('./components/meetings/meetings.component').then(m => m.MeetingsComponent) },
+  { path: 'data', loadComponent: () => import('./components/data/data.component').then(m => m.DataComponent) },
+  { path: 'sandbox', loadComponent: () => import('./components/sandbox/sandbox.component').then(m => m.SandboxComponent) },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];

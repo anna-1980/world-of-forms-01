@@ -1,1 +1,21 @@
-<p>users works!</p>
+<div class="users">
+  <div class="users__login">
+    <h6>Login</h6>
+  <app-login></app-login>
+  </div>
+  <hr>
+  <div class="users__list">
+    <div *ngIf="users$   ">
+      <h5>Existing Users</h5>
+      <ul>
+        <li *ngFor="let user of users$ | async">
+          <span  >{{ user.name }}</span>
+        </li>
+      </ul>
+    
+      </div>
+  </div>
+</div>
+
+
+

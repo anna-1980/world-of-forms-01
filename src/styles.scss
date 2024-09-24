@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+p, li{
+  font-size: 1.1rem;
+}
+
 $colors: (
   green: (
     light: #64b664,
@@ -33,6 +37,16 @@ $colors: (
     default: #eba40b,
     dark: #a35d07
   ),
+  blue: (
+    light: #add8e6,
+    default: #4682b4,
+    dark: #000080
+  ),
+  purple: (
+    light: #e6e6fa,
+    default: #9370db,
+    dark: #4b0082
+  ),
 
 );
 
@@ -42,3 +56,5 @@ $shadow-tabs: 4px 2px 5px 0 rgba(0, 0, 0, 0.3);
 @function toRem($size) {
   @return $size / 16 * 1rem;
 }
+
+

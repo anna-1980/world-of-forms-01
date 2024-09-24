@@ -1,15 +1,22 @@
 @import '../styles.scss'; 
 
+//  app-users{
+//   width: 100%;
+//   height: 100%;
+//   border: 3px solid red;
+//  }
+
 .content{
-  height: 100vh;
+ padding: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  background-color: map-get(map-get($colors, grey), light);
+  // align-items: center;
+  background-color: map-get(map-get($colors, purple), light);
   color: map-get(map-get($colors, grey), dark);
   font-size: 2em;
   font-weight: bold;
- 
+  
 }
+ 

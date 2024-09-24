@@ -1,1 +1,29 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" class="form">
+
+  <div class="form-content">
+    
+    <div class="control ">
+      <label for="email">Email</label>
+      <input [formControl]="loginForm.controls.email" type="email" id="email" name="email" required [ngClass]="{'invalid': emailIsInvalid}">
+      @if (emailIsInvalid) {
+        <div class="error">please enter a valid Email</div>
+      }
+      </div>
+
+    <div class="control ">
+      <label for="password">Password</label>
+      <input [formControl]="loginForm.controls.password" type="password" id="password" name="password" required [ngClass]="{'invalid': passwordIsInvalid}">
+      @if (passwordIsInvalid) {
+        <div class="error">please enter a valid password</div>
+      }
+      </div>
+
+      <button (click)="onSubmit()" class="btn btn-primary">Login</button>
+      <span>&nbsp;</span>
+      <button type="button" [routerLink]="['/register']" class="btn btn-accent">Register</button>
+
+     
+  </div>
+
+</form>
+
