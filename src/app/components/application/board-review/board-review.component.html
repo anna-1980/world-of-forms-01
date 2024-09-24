@@ -1,0 +1,24 @@
+<div class="projects-container" *ngIf="projects  ">
+  <h2>Available Projects</h2>
+
+  <div *ngFor="let project of projects" class="project-card">
+    <h3>{{ project.name }} ({{ project.acronym }})</h3>
+    <p><strong>Institution:</strong> {{ project.institution }}</p>
+    <p><strong>Short Description:</strong> {{ project.shortDescription }}</p>
+    <p><strong>Partners:</strong> {{ project.partners.join(', ') }}</p>
+    <p><strong>Timeframe:</strong> {{ project.timeframe.startDate }} - {{ project.timeframe.endDate }}</p>
+    <p><strong>Status:</strong> {{ project.status }}</p>
+
+    <!-- Optional details like budget -->
+    <div *ngIf="project.budget">
+      <p><strong>Budget Requested:</strong> {{ project.budget.requestedSum }} {{ project.budget.currency }}</p>
+    </div>
+
+    <button (click)="viewProjectDetails(project.id)">View Details</button>
+  </div>
+</div>
+
+<!-- No projects available message -->
+<ng-template #noProjects>
+  <p>No projects available for review.</p>
+</ng-template>

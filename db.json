@@ -92,6 +92,83 @@
     }
   ],
 
+  
+    "projects": [
+      {
+        "id": 1,
+        "name": "Cancer Research Initiative",
+        "acronym": "CRI",
+        "shortDescription": "A multi-phase project focused on developing new cancer treatment methodologies.",
+        "institution": "German Cancer Research Center (DKFZ)",
+        "partners": ["University of Heidelberg", "Charité Berlin"],
+        "timeframe": {
+          "startDate": "2024-01-10",
+          "endDate": "2025-12-15"
+        },
+        "team": {
+          "members": [
+            { "name": "Dr. Alice Weber", "role": "Lead Researcher", "hoursPerWeek": 40 },
+            { "name": "Dr. Max Schmidt", "role": "Researcher", "hoursPerWeek": 30 }
+          ]
+        },
+        "budget": {
+          "requestedSum": 150000,
+          "currency": "EUR"
+        },
+        "status": "submitted",
+        "comments": []
+      },
+      {
+        "id": 2,
+        "name": "Renewable Energy Systems",
+        "acronym": "RES",
+        "shortDescription": "Development of innovative solar and wind energy solutions.",
+        "institution": "Fraunhofer Institute for Solar Energy Systems (ISE)",
+        "partners": ["TU Munich", "E.ON Energy"],
+        "timeframe": {
+          "startDate": "2024-03-01",
+          "endDate": "2026-08-31"
+        },
+        "team": {
+          "members": [
+            { "name": "Dr. Laura Meier", "role": "Project Manager", "hoursPerWeek": 35 },
+            { "name": "Johannes Bauer", "role": "Engineer", "hoursPerWeek": 40 }
+          ]
+        },
+        "budget": {
+          "requestedSum": 200000,
+          "currency": "EUR"
+        },
+        "status": "submitted",
+        "comments": []
+      },
+      {
+        "id": 3,
+        "name": "AI-Powered Healthcare Solutions",
+        "acronym": "AIHS",
+        "shortDescription": "Leveraging AI to improve diagnostics and treatment in healthcare.",
+        "institution": "Helmholtz Zentrum München",
+        "partners": ["Siemens Healthineers", "LMU Munich"],
+        "timeframe": {
+          "startDate": "2023-07-01",
+          "endDate": "2025-12-31"
+        },
+        "team": {
+          "members": [
+            { "name": "Prof. Dr. Michael Köhler", "role": "Lead AI Specialist", "hoursPerWeek": 40 },
+            { "name": "Dr. Sophie Müller", "role": "Medical Advisor", "hoursPerWeek": 20 }
+          ]
+        },
+        "budget": {
+          "requestedSum": 300000,
+          "currency": "EUR"
+        },
+        "status": "submitted",
+        "comments": []
+      }
+    ],
+  
+
   "departments": [
     {
       "id": 200,
