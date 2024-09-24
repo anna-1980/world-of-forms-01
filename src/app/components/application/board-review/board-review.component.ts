@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Project } from '../../../models/project.model';
 import { ProjectService } from '../services/project.service';
 import { CommonModule } from '@angular/common';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-board-review',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './board-review.component.html',
   styleUrl: './board-review.component.scss',
 })
@@ -14,7 +15,7 @@ export class BoardReviewComponent {
   projects!: Project[] | null;
   isLoading = false;
 
-  constructor(private projectService: ProjectService) {}
+  constructor(private projectService: ProjectService, private router: Router) {}
 
   ngOnInit(): void {
     this.projectService.getProjects();
@@ -30,10 +31,9 @@ export class BoardReviewComponent {
     });
   }
 
-   
-    viewProjectDetails(id: number): void {
-      console.log(`Viewing details for project with ID: ${id}`);
-   
-      // this.router.navigate([`/projects/${id}`]);
-    }
+  viewProjectDetails(id: number): void {
+    console.log(`Viewing details for project with ID: ${id}`);
+
+    this.router.navigate([`${id}/board-review-details`]);
+  }
 }
