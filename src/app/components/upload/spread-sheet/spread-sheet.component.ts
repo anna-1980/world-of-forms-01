@@ -64,43 +64,37 @@ export class SpreadSheetComponent implements OnInit {
 
   // Load the available files
   loadAvailableFiles(): void {
-    this.spreadSheetService.loadAvailableFiles().subscribe(
-      (response: AvailableFile[]) => {
+    this.spreadSheetService.loadAvailableFiles().subscribe({
+      next: (response: AvailableFile[]) => {
         this.availableFiles = response;
         console.log('Available files:', this.availableFiles); // Log after files are loaded
-        this.cdr.detectChanges(); // Trigger change detection
+        this.cdr.detectChanges(); // Trigger change detection if needed
       },
-      (error: HttpErrorResponse) => {
+      error: (error: HttpErrorResponse) => {
         console.error('Error loading available files:', error);
         alert('Error loading available files. Please try again.');
       }
-    );
+    });
   }
 
   // Load a specific file's data from the mock database
   loadFile(id: number): void {
     console.log('File ID to load:', id);  // Debugging line
-    this.spreadSheetService.loadFileById(id).subscribe(
-      (response: SpreadsheetData) => {
+  
+    this.spreadSheetService.loadFileById(id).subscribe({
+      next: (response: SpreadsheetData) => {
         this.populateFormWithData(response.data);
+        
         this.currentFileName = response.name;
         this.currentFileId = id;  // Store the numeric ID
       },
-      (error: HttpErrorResponse) => {
+      error: (error: HttpErrorResponse) => {
         console.error('Error loading file:', error);
         alert('Error loading file. Please try again.');
       }
-    );
-  }
-
-  // Populate the form with data from the database or uploaded Excel
-  populateFormWithData(data: string[][]): void {
-    this.spreadsheetForm.clear(); // Clear previous form data
-    data.forEach(row => {
-      const rowArray = this.fb.array(row.map(cell => this.fb.control(cell)));
-      this.spreadsheetForm.push(this.fb.group({ cells: rowArray }));
     });
   }
+  
 
   // Convert form data to Excel-compatible format and download
   saveAsExcel(): void {
@@ -129,6 +123,19 @@ export class SpreadSheetComponent implements OnInit {
       this.populateFormWithData(data as string[][]);
     };
     reader.readAsBinaryString(file);
+  }
+
+  populateFormWithData(data: string[][]): void {
+    this.spreadsheetForm.clear(); // Clear previous form data
+  
+    // Create a new row for each array in the data
+    data.forEach(row => {
+      const rowArray = this.fb.array(row.map(cell => this.fb.control(cell)));
+      this.spreadsheetForm.push(this.fb.group({ cells: rowArray }));
+    });
+  
+    // Trigger change detection if needed
+    this.cdr.detectChanges();
   }
 
   // Save the current spreadsheet to the database
